@@ -1,0 +1,3 @@
+package randomw;
+
+@license(LGPL);
