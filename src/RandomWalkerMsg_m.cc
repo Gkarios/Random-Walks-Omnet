@@ -198,6 +198,7 @@ void RandomWalkerMsg::copy(const RandomWalkerMsg& other)
         this->visitedPerHop[i] = other.visitedPerHop[i];
     }
     this->walkerId = other.walkerId;
+    this->lastDuplicationRound = other.lastDuplicationRound;
 }
 
 void RandomWalkerMsg::parsimPack(omnetpp::cCommBuffer *b) const
@@ -211,6 +212,7 @@ void RandomWalkerMsg::parsimPack(omnetpp::cCommBuffer *b) const
     b->pack(visitedPerHop_arraysize);
     doParsimArrayPacking(b,this->visitedPerHop,visitedPerHop_arraysize);
     doParsimPacking(b,this->walkerId);
+    doParsimPacking(b,this->lastDuplicationRound);
 }
 
 void RandomWalkerMsg::parsimUnpack(omnetpp::cCommBuffer *b)
@@ -242,6 +244,7 @@ void RandomWalkerMsg::parsimUnpack(omnetpp::cCommBuffer *b)
         doParsimArrayUnpacking(b,this->visitedPerHop,visitedPerHop_arraysize);
     }
     doParsimUnpacking(b,this->walkerId);
+    doParsimUnpacking(b,this->lastDuplicationRound);
 }
 
 int RandomWalkerMsg::getHopCountr() const
@@ -462,6 +465,16 @@ void RandomWalkerMsg::setWalkerId(int walkerId)
     this->walkerId = walkerId;
 }
 
+int RandomWalkerMsg::getLastDuplicationRound() const
+{
+    return this->lastDuplicationRound;
+}
+
+void RandomWalkerMsg::setLastDuplicationRound(int lastDuplicationRound)
+{
+    this->lastDuplicationRound = lastDuplicationRound;
+}
+
 class RandomWalkerMsgDescriptor : public omnetpp::cClassDescriptor
 {
   private:
@@ -472,6 +485,7 @@ class RandomWalkerMsgDescriptor : public omnetpp::cClassDescriptor
         FIELD_visitedNodes,
         FIELD_visitedPerHop,
         FIELD_walkerId,
+        FIELD_lastDuplicationRound,
     };
   public:
     RandomWalkerMsgDescriptor();
@@ -538,7 +552,7 @@ const char *RandomWalkerMsgDescriptor::getProperty(const char *propertyName) con
 int RandomWalkerMsgDescriptor::getFieldCount() const
 {
     omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
-    return base ? 5+base->getFieldCount() : 5;
+    return base ? 6+base->getFieldCount() : 6;
 }
 
 unsigned int RandomWalkerMsgDescriptor::getFieldTypeFlags(int field) const
@@ -555,8 +569,9 @@ unsigned int RandomWalkerMsgDescriptor::getFieldTypeFlags(int field) const
         FD_ISARRAY | FD_ISEDITABLE | FD_ISRESIZABLE,    // FIELD_visitedNodes
         FD_ISARRAY | FD_ISEDITABLE | FD_ISRESIZABLE,    // FIELD_visitedPerHop
         FD_ISEDITABLE,    // FIELD_walkerId
+        FD_ISEDITABLE,    // FIELD_lastDuplicationRound
     };
-    return (field >= 0 && field < 5) ? fieldTypeFlags[field] : 0;
+    return (field >= 0 && field < 6) ? fieldTypeFlags[field] : 0;
 }
 
 const char *RandomWalkerMsgDescriptor::getFieldName(int field) const
@@ -573,8 +588,9 @@ const char *RandomWalkerMsgDescriptor::getFieldName(int field) const
         "visitedNodes",
         "visitedPerHop",
         "walkerId",
+        "lastDuplicationRound",
     };
-    return (field >= 0 && field < 5) ? fieldNames[field] : nullptr;
+    return (field >= 0 && field < 6) ? fieldNames[field] : nullptr;
 }
 
 int RandomWalkerMsgDescriptor::findField(const char *fieldName) const
@@ -586,6 +602,7 @@ int RandomWalkerMsgDescriptor::findField(const char *fieldName) const
     if (strcmp(fieldName, "visitedNodes") == 0) return baseIndex + 2;
     if (strcmp(fieldName, "visitedPerHop") == 0) return baseIndex + 3;
     if (strcmp(fieldName, "walkerId") == 0) return baseIndex + 4;
+    if (strcmp(fieldName, "lastDuplicationRound") == 0) return baseIndex + 5;
     return base ? base->findField(fieldName) : -1;
 }
 
@@ -603,8 +620,9 @@ const char *RandomWalkerMsgDescriptor::getFieldTypeString(int field) const
         "int",    // FIELD_visitedNodes
         "int",    // FIELD_visitedPerHop
         "int",    // FIELD_walkerId
+        "int",    // FIELD_lastDuplicationRound
     };
-    return (field >= 0 && field < 5) ? fieldTypeStrings[field] : nullptr;
+    return (field >= 0 && field < 6) ? fieldTypeStrings[field] : nullptr;
 }
 
 const char **RandomWalkerMsgDescriptor::getFieldPropertyNames(int field) const
@@ -698,6 +716,7 @@ std::string RandomWalkerMsgDescriptor::getFieldValueAsString(omnetpp::any_ptr ob
         case FIELD_visitedNodes: return long2string(pp->getVisitedNodes(i));
         case FIELD_visitedPerHop: return long2string(pp->getVisitedPerHop(i));
         case FIELD_walkerId: return long2string(pp->getWalkerId());
+        case FIELD_lastDuplicationRound: return long2string(pp->getLastDuplicationRound());
         default: return "";
     }
 }
@@ -719,6 +738,7 @@ void RandomWalkerMsgDescriptor::setFieldValueAsString(omnetpp::any_ptr object, i
         case FIELD_visitedNodes: pp->setVisitedNodes(i,string2long(value)); break;
         case FIELD_visitedPerHop: pp->setVisitedPerHop(i,string2long(value)); break;
         case FIELD_walkerId: pp->setWalkerId(string2long(value)); break;
+        case FIELD_lastDuplicationRound: pp->setLastDuplicationRound(string2long(value)); break;
         default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'RandomWalkerMsg'", field);
     }
 }
@@ -738,6 +758,7 @@ omnetpp::cValue RandomWalkerMsgDescriptor::getFieldValue(omnetpp::any_ptr object
         case FIELD_visitedNodes: return pp->getVisitedNodes(i);
         case FIELD_visitedPerHop: return pp->getVisitedPerHop(i);
         case FIELD_walkerId: return pp->getWalkerId();
+        case FIELD_lastDuplicationRound: return pp->getLastDuplicationRound();
         default: throw omnetpp::cRuntimeError("Cannot return field %d of class 'RandomWalkerMsg' as cValue -- field index out of range?", field);
     }
 }
@@ -759,6 +780,7 @@ void RandomWalkerMsgDescriptor::setFieldValue(omnetpp::any_ptr object, int field
         case FIELD_visitedNodes: pp->setVisitedNodes(i,omnetpp::checked_int_cast<int>(value.intValue())); break;
         case FIELD_visitedPerHop: pp->setVisitedPerHop(i,omnetpp::checked_int_cast<int>(value.intValue())); break;
         case FIELD_walkerId: pp->setWalkerId(omnetpp::checked_int_cast<int>(value.intValue())); break;
+        case FIELD_lastDuplicationRound: pp->setLastDuplicationRound(omnetpp::checked_int_cast<int>(value.intValue())); break;
         default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'RandomWalkerMsg'", field);
     }
 }

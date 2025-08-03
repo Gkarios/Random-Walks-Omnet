@@ -38,6 +38,9 @@ using namespace omnetpp;
     static int timestep;
     static std::vector<bool> visited;
     static std::vector<int> visitedPerTimestep;
+    static int duplicationInterval;
+    static bool enableDuplication;
+    static int walkerIdCounter;
     // Node();
     // virtual ~Node();
 
@@ -47,6 +50,8 @@ using namespace omnetpp;
     virtual void handleMessage(cMessage *msg);
     virtual void sendToRandomNeighbor(RandomWalkerMsg *msg);
     virtual void startRandomWalker(int walkerIndex);
+    virtual void triggerWalkerDuplication();
+    virtual void duplicateWalker(RandomWalkerMsg *rwMsg);
 
   private:
     int startNodeIndex;

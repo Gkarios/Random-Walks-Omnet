@@ -1,0 +1,72 @@
+version 3
+run Showcase-2-20250725-14:11:26-6507
+attr configname Showcase
+attr datetime 20250725-14:11:26
+attr datetimef 20250725-141126
+attr experiment Showcase
+attr inifile omnetpp.ini
+attr iterationvars $0=true
+attr iterationvarsd true
+attr iterationvarsf true-
+attr measurement $0=true
+attr network RGG
+attr processid 6507
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+config **.node[*].xCor "uniform(0.0, 1.0, 0)"
+config **.node[*].yCor "uniform(0.0, 1.0, 0)"
+config **.node[*].numWalkers 1
+config **.node[*].numNodes 20
+config **.node[*].enableDuplication true
+config network RGG
+config seed-set 2
+config num-rngs 1
+config sim-time-limit 10s
+config repeat 10
+
+vector 0 RGG.node[4] visitedPerTimestep ETV
+vector 1 RGG.node[7] visitedPerTimestep ETV
+vector 2 RGG.node[20] visitedPerTimestep ETV
+vector 3 RGG.node[22] visitedPerTimestep ETV
+vector 4 RGG.node[3] visitedPerTimestep ETV
+vector 5 RGG.node[9] visitedPerTimestep ETV
+vector 6 RGG.node[19] visitedPerTimestep ETV
+vector 7 RGG.node[1] visitedPerTimestep ETV
+vector 8 RGG.node[12] visitedPerTimestep ETV
+vector 9 RGG.node[17] visitedPerTimestep ETV
+vector 10 RGG.node[15] visitedPerTimestep ETV
+vector 11 RGG.node[21] visitedPerTimestep ETV
+vector 12 RGG.node[11] visitedPerTimestep ETV
+vector 13 RGG.node[14] visitedPerTimestep ETV
+vector 14 RGG.node[23] visitedPerTimestep ETV
+vector 15 RGG.node[24] visitedPerTimestep ETV
+vector 16 RGG.node[0] visitedPerTimestep ETV
+0	1	0	1
+1	2	0	2
+2	3	0	3
+2	10	0	9
+2	25	0	17
+3	4	0	4
+3	11	0	9
+3	22	0	15
+4	5	0	5
+5	6	0	6
+5	16	0	12
+6	7	0	7
+7	8	0	8
+8	9	0	9
+8	19	0	14
+9	12	0	10
+9	14	0	11
+10	13	0	11
+11	15	0	12
+11	20	0	14
+12	17	0	13
+13	18	0	14
+14	21	0	15
+15	23	0	16
+16	24	0	17
+

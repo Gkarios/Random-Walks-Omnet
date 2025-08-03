@@ -30,9 +30,9 @@ simple Node
         bool isSink = default(false) @mutable;
         double ackTransmissionEnergyConsumption = default(0.0) @mutable; //An ack will deplete a proportion of the 
         double distanceToSink = default(0.0) @mutable; //distance to sink
-        // int numNodes = default(20);
+        int duplicationInterval = default(100) @mutable; // Interval for walker duplication
 
-        int numWalkers = default(1);
+
         
         @display("p=$xCor,$yCor;i=block/process;is=vs;");
         @node;

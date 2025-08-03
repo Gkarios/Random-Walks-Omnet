@@ -7,7 +7,7 @@ void Host::initialize(int stage) {
   if (stage == 0) {
     topo.extractByProperty("node");
 
-    // Get the number of nodes from omnetpp.ini
+    // Fetch the number of nodes from omnetpp.ini
     int numNodes = getParentModule()->par("numNodes").intValue();
 
     // Pick a random starting node index for the Random Walker 
@@ -15,7 +15,7 @@ void Host::initialize(int stage) {
 
     cTopology::Node *randomNode = topo.getNode(randomNodeIndex);
     if (randomNode) {
-      startNodeIndex = 4;// randomNodeIndex;
+      startNodeIndex = randomNodeIndex;
       EV << "Randomly selected start node: " << randomNode->getModule()->getFullName()
          << " with index: " << startNodeIndex << endl;
     } else {
@@ -25,7 +25,9 @@ void Host::initialize(int stage) {
 }
 
 void Host::handleMessage(cMessage *msg) {
-  lastWalkerMsg = check_and_cast<RandomWalkerMsg *>(msg);
+    if (lastWalkerMsg)
+        delete lastWalkerMsg;
+    lastWalkerMsg = check_and_cast<RandomWalkerMsg *>(msg);
 }
 
 int Host::getStartNodeIndex() const{
@@ -34,7 +36,9 @@ int Host::getStartNodeIndex() const{
 
 void Host::finish() {
     if (lastWalkerMsg) {
-        std::ofstream out("prints/data/unique_visited_nodes.txt", std::ios::out | std::ios::trunc);
+        int runNumber = getSimulation()->getActiveEnvir()->getConfigEx()->getActiveRunNumber();
+        std::string filename = "prints/data/qtcmd/unique_visited_nodes_run" + std::to_string(runNumber) + ".txt";
+        std::ofstream out(filename, std::ios::out | std::ios::trunc);
         if (out.is_open()) {
             int m = lastWalkerMsg->getVisitedPerHopArraySize();
             for (int i = 0; i < m; ++i)
@@ -43,5 +47,7 @@ void Host::finish() {
         } else {
             EV << "Could not open file for writing unique visited nodes.\n";
         }
+        delete lastWalkerMsg;
+        lastWalkerMsg = nullptr;
     }
 }

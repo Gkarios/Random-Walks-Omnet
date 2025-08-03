@@ -21,12 +21,13 @@ import randomw.Host;
 network RGG
 {
     parameters:
-        int numNodes = default(10);
-        double rc = default(0.5);
-        int sinkNode @mutable = default(0);
+        int numNodes = default(25);
+        double rc = default(0.2);
+        int sinkNode = default(0) @mutable;
         int startNode = default(11);
-        int numWalkers = default(1); // Number of random walkers to start from each node
         @display("bgb=1,1");
+        bool enableDuplication = default(false) @mutable; // Enable walker duplication
+        int numWalkers = default(1);
     submodules:
         node[numNodes]: Node;
         host: Host;

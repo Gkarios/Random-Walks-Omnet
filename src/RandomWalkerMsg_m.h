@@ -27,6 +27,7 @@ class RandomWalkerMsg;
  *     int visitedNodes[];
  *     int visitedPerHop[];
  *     int walkerId = -1;
+ *     int lastDuplicationRound = -1;
  * }
  * </pre>
  */
@@ -41,6 +42,7 @@ class RandomWalkerMsg : public ::omnetpp::cMessage
     int *visitedPerHop = nullptr;
     size_t visitedPerHop_arraysize = 0;
     int walkerId = -1;
+    int lastDuplicationRound = -1;
 
   private:
     void copy(const RandomWalkerMsg& other);
@@ -89,6 +91,9 @@ class RandomWalkerMsg : public ::omnetpp::cMessage
 
     virtual int getWalkerId() const;
     virtual void setWalkerId(int walkerId);
+
+    virtual int getLastDuplicationRound() const;
+    virtual void setLastDuplicationRound(int lastDuplicationRound);
 };
 
 inline void doParsimPacking(omnetpp::cCommBuffer *b, const RandomWalkerMsg& obj) {obj.parsimPack(b);}

@@ -4,4 +4,5 @@ message RandomWalkerMsg{
     int visitedNodes[];
     int visitedPerHop[];
     int walkerId = -1;
+    int lastDuplicationRound = -1;
 }

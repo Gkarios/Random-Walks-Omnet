@@ -10,25 +10,32 @@ bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
 int Node::timestep = 0;
+int Node::duplicationInterval = 5;
+int Node::walkerIdCounter = 100000; 
+bool Node::enableDuplication = false;
 
 void Node::initialize(int stage) {
     if (stage == 0) {
         int numNodes = getParentModule()->par("numNodes").intValue();
+        enableDuplication = getParentModule()->par("enableDuplication").boolValue();
         visitedVector.setName("visitedPerTimestep");
-        if ((int)visited.size() != numNodes) {
-            visited.assign(numNodes, false);
-            globalAllVisited = false;
-        }
+
+        // Always reset static state!
+        visited.assign(numNodes, false);
+        globalAllVisited = false;
         visitedPerTimestep.clear();
         visitedPerTimestep.push_back(0); // Start with timestep 0, 0 nodes visited
+        walkersMovedThisStep = 0;
+        timestep = 0;
+        walkerIdCounter = 100000; // Or whatever your initial value is
     }
     if (stage == 1) {
-        numWalkers = par("numWalkers").intValue();
+        numWalkers = getParentModule()->par("numWalkers").intValue();
         cModule *hostModule = getParentModule()->getSubmodule("host");
         if (!hostModule)
             throw cRuntimeError("Host module not found!");
 
-        int startNodeIndex = 0; // Always start from node 0
+        int startNodeIndex = 7; // Or your logic for start node
         if (getIndex() == startNodeIndex) {
             for (int i = 0; i < numWalkers; ++i) {
                 startRandomWalker(i);
@@ -43,7 +50,7 @@ void Node::handleMessage(cMessage *msg) {
     int nodeId = getIndex();
     if (!visited[nodeId]) {
         visited[nodeId] = true;
-        getDisplayString().setTagArg("i", 1, "red"); // Color node red when visited
+        getDisplayString().setTagArg("i", 1, "red");
     }
 
     // Add to path (per walker)
@@ -72,19 +79,21 @@ void Node::handleMessage(cMessage *msg) {
     if (walkersMovedThisStep == numWalkers) {
         timestep++;
         walkersMovedThisStep = 0;
-
-        // Record unique nodes visited at this timestep (shared)
         int uniqueVisited = std::count(visited.begin(), visited.end(), true);
+
+        // Record the number of visited nodes at this timestep
         visitedPerTimestep.push_back(uniqueVisited);
         visitedVector.record(uniqueVisited);
+
+        // Stop when all nodes have been visited (shared between the RWs)
+        int numNodes = getParentModule()->par("numNodes").intValue();
+        if (!globalAllVisited && uniqueVisited >= numNodes) {
+            globalAllVisited = true;
+        }
     }
 
-    // Stop when all nodes have been visited (shared between the RWs)
-    int numNodes = getParentModule()->par("numNodes").intValue();
-    int uniqueVisited = std::count(visited.begin(), visited.end(), true);
-    if (!globalAllVisited && uniqueVisited >= numNodes) {
-        globalAllVisited = true;
-    }
+    duplicateWalker(rwMsg);
+
     if (globalAllVisited) {
         // Copy per-timestep data into the message
         rwMsg->setVisitedPerHopArraySize(visitedPerTimestep.size());
@@ -127,4 +136,39 @@ void Node::startRandomWalker(int walkerId) {
     msg->setWalkerId(walkerId);  // Add this field in your .msg file if you want to distinguish walkers
 
     sendToRandomNeighbor(msg);
+}
+
+void Node::triggerWalkerDuplication() {
+    // Only the node(s) currently holding a walker will execute this
+    // Each walker duplicates itself
+    // You can use the walkerId to distinguish walkers if needed
+
+    // Create a new walker message (duplicate)
+    RandomWalkerMsg *dupMsg = new RandomWalkerMsg("randomWalkerMsg");
+    dupMsg->setPathArraySize(1);
+    dupMsg->setPath(0, getIndex());
+    dupMsg->setVisitedNodesArraySize(1);
+    dupMsg->setVisitedNodes(0, getIndex());
+    dupMsg->setHopCountr(0);
+    dupMsg->setVisitedPerHopArraySize(1);
+    dupMsg->setVisitedPerHop(0, 1);
+    dupMsg->setWalkerId(walkerIdCounter++); // Assign a new unique id
+
+    // Send the duplicate to a random neighbor (or keep at current node)
+    sendToRandomNeighbor(dupMsg);
+
+    // Optionally, update numWalkers (if you want to track total walkers)
+    numWalkers++;
+}
+
+void Node::duplicateWalker(RandomWalkerMsg *rwMsg) {
+    if (!enableDuplication)
+        return;
+
+    int currentDupRound = (duplicationInterval > 0) ? (timestep / duplicationInterval) : -1;
+    if (!globalAllVisited && duplicationInterval > 0 && timestep > 0 && timestep % duplicationInterval == 0 &&
+        rwMsg->getLastDuplicationRound() < currentDupRound) {
+        rwMsg->setLastDuplicationRound(currentDupRound);
+        triggerWalkerDuplication();
+    }
 }

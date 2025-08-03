@@ -1,0 +1,532 @@
+version 3
+run Showcase-0-20250725-16:14:09-12528
+attr configname Showcase
+attr datetime 20250725-16:14:09
+attr datetimef 20250725-161409
+attr experiment Showcase
+attr inifile omnetpp.ini
+attr iterationvars "$0=1, $1=true"
+attr iterationvarsd 1/true
+attr iterationvarsf 1,true-
+attr measurement "$0=1, $1=true"
+attr network RGG
+attr processid 12528
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config **.node[*].xCor "uniform(0.0, 1.0, 0)"
+config **.node[*].yCor "uniform(0.0, 1.0, 0)"
+config *.numWalkers 1
+config *.numNodes 20
+config *.enableDuplication true
+config network RGG
+config seed-set 0
+config num-rngs 1
+config sim-time-limit 10s
+
+par RGG.node[0].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[12].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[0].port$o[13].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[1].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[2].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[3].port$o[12].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[14].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[4].port$o[12].channel typename "\"ned.IdealChannel\""
+par RGG.node[16].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[7].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[8].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[5].port$o[12].channel typename "\"ned.IdealChannel\""
+par RGG.node[18].port$o[0].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[14].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[16].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[6].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[18].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[7].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[8].port$o[1].channel typename "\"ned.IdealChannel\""
+par RGG.node[7].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[7].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[18].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[8].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[8].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[8].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[18].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[14].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[9].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[16].port$o[2].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[8].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[9].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[10].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[10].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[11].channel typename "\"ned.IdealChannel\""
+par RGG.node[14].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[12].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[11].port$o[13].channel typename "\"ned.IdealChannel\""
+par RGG.node[18].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[12].port$o[12].channel typename "\"ned.IdealChannel\""
+par RGG.node[18].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[13].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[14].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[14].port$o[5].channel typename "\"ned.IdealChannel\""
+par RGG.node[16].port$o[3].channel typename "\"ned.IdealChannel\""
+par RGG.node[15].port$o[7].channel typename "\"ned.IdealChannel\""
+par RGG.node[16].port$o[4].channel typename "\"ned.IdealChannel\""
+par RGG.node[17].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[19].port$o[6].channel typename "\"ned.IdealChannel\""
+par RGG.node[0] typename "\"randomw.Node\""
+par RGG.node[0] sendInterval 1
+par RGG.node[0] xCor 0.548814
+par RGG.node[0] yCor 0.592845
+par RGG.node[0] packetLength 127
+par RGG.node[0] bitrate 250000
+par RGG.node[0] initialEnergy 1000
+par RGG.node[0] isSink false
+attr mutable ""
+par RGG.node[0] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[0] distanceToSink 0
+attr mutable ""
+par RGG.node[0] duplicationInterval 100
+attr mutable ""
+par RGG.node[1] typename "\"randomw.Node\""
+par RGG.node[1] sendInterval 1
+par RGG.node[1] xCor 0.715189
+par RGG.node[1] yCor 0.844266
+par RGG.node[1] packetLength 127
+par RGG.node[1] bitrate 250000
+par RGG.node[1] initialEnergy 1000
+par RGG.node[1] isSink false
+attr mutable ""
+par RGG.node[1] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[1] distanceToSink 0
+attr mutable ""
+par RGG.node[1] duplicationInterval 100
+attr mutable ""
+par RGG.node[2] typename "\"randomw.Node\""
+par RGG.node[2] sendInterval 1
+par RGG.node[2] xCor 0.602763
+par RGG.node[2] yCor 0.857946
+par RGG.node[2] packetLength 127
+par RGG.node[2] bitrate 250000
+par RGG.node[2] initialEnergy 1000
+par RGG.node[2] isSink false
+attr mutable ""
+par RGG.node[2] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[2] distanceToSink 0
+attr mutable ""
+par RGG.node[2] duplicationInterval 100
+attr mutable ""
+par RGG.node[3] typename "\"randomw.Node\""
+par RGG.node[3] sendInterval 1
+par RGG.node[3] xCor 0.544883
+par RGG.node[3] yCor 0.847252
+par RGG.node[3] packetLength 127
+par RGG.node[3] bitrate 250000
+par RGG.node[3] initialEnergy 1000
+par RGG.node[3] isSink false
+attr mutable ""
+par RGG.node[3] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[3] distanceToSink 0
+attr mutable ""
+par RGG.node[3] duplicationInterval 100
+attr mutable ""
+par RGG.node[4] typename "\"randomw.Node\""
+par RGG.node[4] sendInterval 1
+par RGG.node[4] xCor 0.423655
+par RGG.node[4] yCor 0.623564
+par RGG.node[4] packetLength 127
+par RGG.node[4] bitrate 250000
+par RGG.node[4] initialEnergy 1000
+par RGG.node[4] isSink false
+attr mutable ""
+par RGG.node[4] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[4] distanceToSink 0
+attr mutable ""
+par RGG.node[4] duplicationInterval 100
+attr mutable ""
+par RGG.node[5] typename "\"randomw.Node\""
+par RGG.node[5] sendInterval 1
+par RGG.node[5] xCor 0.645894
+par RGG.node[5] yCor 0.384382
+par RGG.node[5] packetLength 127
+par RGG.node[5] bitrate 250000
+par RGG.node[5] initialEnergy 1000
+par RGG.node[5] isSink false
+attr mutable ""
+par RGG.node[5] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[5] distanceToSink 0
+attr mutable ""
+par RGG.node[5] duplicationInterval 100
+attr mutable ""
+par RGG.node[6] typename "\"randomw.Node\""
+par RGG.node[6] sendInterval 1
+par RGG.node[6] xCor 0.437587
+par RGG.node[6] yCor 0.297535
+par RGG.node[6] packetLength 127
+par RGG.node[6] bitrate 250000
+par RGG.node[6] initialEnergy 1000
+par RGG.node[6] isSink false
+attr mutable ""
+par RGG.node[6] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[6] distanceToSink 0
+attr mutable ""
+par RGG.node[6] duplicationInterval 100
+attr mutable ""
+par RGG.node[7] typename "\"randomw.Node\""
+par RGG.node[7] sendInterval 1
+par RGG.node[7] xCor 0.891773
+par RGG.node[7] yCor 0.056713
+par RGG.node[7] packetLength 127
+par RGG.node[7] bitrate 250000
+par RGG.node[7] initialEnergy 1000
+par RGG.node[7] isSink false
+attr mutable ""
+par RGG.node[7] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[7] distanceToSink 0
+attr mutable ""
+par RGG.node[7] duplicationInterval 100
+attr mutable ""
+par RGG.node[8] typename "\"randomw.Node\""
+par RGG.node[8] sendInterval 1
+par RGG.node[8] xCor 0.963663
+par RGG.node[8] yCor 0.272656
+par RGG.node[8] packetLength 127
+par RGG.node[8] bitrate 250000
+par RGG.node[8] initialEnergy 1000
+par RGG.node[8] isSink false
+attr mutable ""
+par RGG.node[8] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[8] distanceToSink 0
+attr mutable ""
+par RGG.node[8] duplicationInterval 100
+attr mutable ""
+par RGG.node[9] typename "\"randomw.Node\""
+par RGG.node[9] sendInterval 1
+par RGG.node[9] xCor 0.383442
+par RGG.node[9] yCor 0.477665
+par RGG.node[9] packetLength 127
+par RGG.node[9] bitrate 250000
+par RGG.node[9] initialEnergy 1000
+par RGG.node[9] isSink false
+attr mutable ""
+par RGG.node[9] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[9] distanceToSink 0
+attr mutable ""
+par RGG.node[9] duplicationInterval 100
+attr mutable ""
+par RGG.node[10] typename "\"randomw.Node\""
+par RGG.node[10] sendInterval 1
+par RGG.node[10] xCor 0.791725
+par RGG.node[10] yCor 0.812169
+par RGG.node[10] packetLength 127
+par RGG.node[10] bitrate 250000
+par RGG.node[10] initialEnergy 1000
+par RGG.node[10] isSink false
+attr mutable ""
+par RGG.node[10] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[10] distanceToSink 0
+attr mutable ""
+par RGG.node[10] duplicationInterval 100
+attr mutable ""
+par RGG.node[11] typename "\"randomw.Node\""
+par RGG.node[11] sendInterval 1
+par RGG.node[11] xCor 0.528895
+par RGG.node[11] yCor 0.479977
+par RGG.node[11] packetLength 127
+par RGG.node[11] bitrate 250000
+par RGG.node[11] initialEnergy 1000
+par RGG.node[11] isSink false
+attr mutable ""
+par RGG.node[11] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[11] distanceToSink 0
+attr mutable ""
+par RGG.node[11] duplicationInterval 100
+attr mutable ""
+par RGG.node[12] typename "\"randomw.Node\""
+par RGG.node[12] sendInterval 1
+par RGG.node[12] xCor 0.568045
+par RGG.node[12] yCor 0.392785
+par RGG.node[12] packetLength 127
+par RGG.node[12] bitrate 250000
+par RGG.node[12] initialEnergy 1000
+par RGG.node[12] isSink false
+attr mutable ""
+par RGG.node[12] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[12] distanceToSink 0
+attr mutable ""
+par RGG.node[12] duplicationInterval 100
+attr mutable ""
+par RGG.node[13] typename "\"randomw.Node\""
+par RGG.node[13] sendInterval 1
+par RGG.node[13] xCor 0.925597
+par RGG.node[13] yCor 0.836079
+par RGG.node[13] packetLength 127
+par RGG.node[13] bitrate 250000
+par RGG.node[13] initialEnergy 1000
+par RGG.node[13] isSink false
+attr mutable ""
+par RGG.node[13] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[13] distanceToSink 0
+attr mutable ""
+par RGG.node[13] duplicationInterval 100
+attr mutable ""
+par RGG.node[14] typename "\"randomw.Node\""
+par RGG.node[14] sendInterval 1
+par RGG.node[14] xCor 0.0710361
+par RGG.node[14] yCor 0.337396
+par RGG.node[14] packetLength 127
+par RGG.node[14] bitrate 250000
+par RGG.node[14] initialEnergy 1000
+par RGG.node[14] isSink false
+attr mutable ""
+par RGG.node[14] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[14] distanceToSink 0
+attr mutable ""
+par RGG.node[14] duplicationInterval 100
+attr mutable ""
+par RGG.node[15] typename "\"randomw.Node\""
+par RGG.node[15] sendInterval 1
+par RGG.node[15] xCor 0.0871293
+par RGG.node[15] yCor 0.648172
+par RGG.node[15] packetLength 127
+par RGG.node[15] bitrate 250000
+par RGG.node[15] initialEnergy 1000
+par RGG.node[15] isSink false
+attr mutable ""
+par RGG.node[15] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[15] distanceToSink 0
+attr mutable ""
+par RGG.node[15] duplicationInterval 100
+attr mutable ""
+par RGG.node[16] typename "\"randomw.Node\""
+par RGG.node[16] sendInterval 1
+par RGG.node[16] xCor 0.0202184
+par RGG.node[16] yCor 0.368242
+par RGG.node[16] packetLength 127
+par RGG.node[16] bitrate 250000
+par RGG.node[16] initialEnergy 1000
+par RGG.node[16] isSink false
+attr mutable ""
+par RGG.node[16] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[16] distanceToSink 0
+attr mutable ""
+par RGG.node[16] duplicationInterval 100
+attr mutable ""
+par RGG.node[17] typename "\"randomw.Node\""
+par RGG.node[17] sendInterval 1
+par RGG.node[17] xCor 0.83262
+par RGG.node[17] yCor 0.957155
+par RGG.node[17] packetLength 127
+par RGG.node[17] bitrate 250000
+par RGG.node[17] initialEnergy 1000
+par RGG.node[17] isSink false
+attr mutable ""
+par RGG.node[17] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[17] distanceToSink 0
+attr mutable ""
+par RGG.node[17] duplicationInterval 100
+attr mutable ""
+par RGG.node[18] typename "\"randomw.Node\""
+par RGG.node[18] sendInterval 1
+par RGG.node[18] xCor 0.778157
+par RGG.node[18] yCor 0.140351
+par RGG.node[18] packetLength 127
+par RGG.node[18] bitrate 250000
+par RGG.node[18] initialEnergy 1000
+par RGG.node[18] isSink false
+attr mutable ""
+par RGG.node[18] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[18] distanceToSink 0
+attr mutable ""
+par RGG.node[18] duplicationInterval 100
+attr mutable ""
+par RGG.node[19] typename "\"randomw.Node\""
+par RGG.node[19] sendInterval 1
+par RGG.node[19] xCor 0.870012
+par RGG.node[19] yCor 0.870087
+par RGG.node[19] packetLength 127
+par RGG.node[19] bitrate 250000
+par RGG.node[19] initialEnergy 1000
+par RGG.node[19] isSink false
+attr mutable ""
+par RGG.node[19] ackTransmissionEnergyConsumption 0
+attr mutable ""
+par RGG.node[19] distanceToSink 0
+attr mutable ""
+par RGG.node[19] duplicationInterval 100
+attr mutable ""
+par RGG.host typename "\"randomw.Host\""
+par RGG.host startNode 11
+par RGG typename "\"randomw.simulations.RGG\""
+par RGG numNodes 20
+par RGG rc 0.5
+par RGG sinkNode 0
+attr mutable ""
+par RGG startNode 11
+par RGG enableDuplication true
+attr mutable ""
+par RGG numWalkers 1
+
