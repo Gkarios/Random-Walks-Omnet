@@ -10,7 +10,7 @@ bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
 int Node::timestep = 0;
-int Node::duplicationInterval = 5;
+int Node::duplicationInterval = 50;
 int Node::walkerIdCounter = 100000; 
 bool Node::enableDuplication = false;
 
@@ -78,6 +78,7 @@ void Node::handleMessage(cMessage *msg) {
     // Only increment timestep and record data when all walkers have moved
     if (walkersMovedThisStep == numWalkers) {
         timestep++;
+        EV << "Timestep incremented to " << timestep << endl;
         walkersMovedThisStep = 0;
         int uniqueVisited = std::count(visited.begin(), visited.end(), true);
 
@@ -141,9 +142,9 @@ void Node::startRandomWalker(int walkerId) {
 void Node::triggerWalkerDuplication() {
     // Only the node(s) currently holding a walker will execute this
     // Each walker duplicates itself
-    // You can use the walkerId to distinguish walkers if needed
 
-    // Create a new walker message (duplicate)
+    int currentDupRound = (duplicationInterval > 0) ? (timestep / duplicationInterval) : -1;
+
     RandomWalkerMsg *dupMsg = new RandomWalkerMsg("randomWalkerMsg");
     dupMsg->setPathArraySize(1);
     dupMsg->setPath(0, getIndex());
@@ -152,12 +153,11 @@ void Node::triggerWalkerDuplication() {
     dupMsg->setHopCountr(0);
     dupMsg->setVisitedPerHopArraySize(1);
     dupMsg->setVisitedPerHop(0, 1);
-    dupMsg->setWalkerId(walkerIdCounter++); // Assign a new unique id
+    dupMsg->setWalkerId(walkerIdCounter++);
+    dupMsg->setLastDuplicationRound(currentDupRound); // <-- Set to current round!
 
-    // Send the duplicate to a random neighbor (or keep at current node)
     sendToRandomNeighbor(dupMsg);
 
-    // Optionally, update numWalkers (if you want to track total walkers)
     numWalkers++;
 }
 
@@ -171,4 +171,8 @@ void Node::duplicateWalker(RandomWalkerMsg *rwMsg) {
         rwMsg->setLastDuplicationRound(currentDupRound);
         triggerWalkerDuplication();
     }
+}
+
+void Node::finish(){
+    EV << "Random walkers are " << numWalkers << " in total.\n";
 }

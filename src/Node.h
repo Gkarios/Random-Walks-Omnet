@@ -52,6 +52,7 @@ using namespace omnetpp;
     virtual void startRandomWalker(int walkerIndex);
     virtual void triggerWalkerDuplication();
     virtual void duplicateWalker(RandomWalkerMsg *rwMsg);
+    virtual void finish() override;
 
   private:
     int startNodeIndex;

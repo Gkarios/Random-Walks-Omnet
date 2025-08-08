@@ -1,8 +1,8 @@
 version 3
-run General-289-20250729-21:37:03-52079
+run General-289-20250808-22:38:13-6860
 attr configname General
-attr datetime 20250729-21:37:03
-attr datetimef 20250729-213703
+attr datetime 20250808-22:38:13
+attr datetimef 20250808-223813
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network RGG
-attr processid 52079
+attr processid 6860
 attr repetition 289
 attr replication #289
 attr resultdir results
@@ -23,265 +23,182 @@ config sim-time-limit 10s
 config repeat 500
 config **.node[*].xCor "uniform(0.0, 1.0, 0)"
 config **.node[*].yCor "uniform(0.0, 1.0, 0)"
-config *.numWalkers 2
+config *.numWalkers 1
 config *.numNodes 50
-config *.enableDuplication false
-config *.rc 0.33
+config *.enableDuplication true
+config *.rc 0.4
 
-vector 0 RGG.node[35] visitedPerTimestep ETV
-vector 1 RGG.node[40] visitedPerTimestep ETV
-vector 2 RGG.node[30] visitedPerTimestep ETV
-vector 3 RGG.node[43] visitedPerTimestep ETV
-vector 4 RGG.node[9] visitedPerTimestep ETV
-vector 5 RGG.node[46] visitedPerTimestep ETV
-vector 6 RGG.node[31] visitedPerTimestep ETV
-vector 7 RGG.node[15] visitedPerTimestep ETV
-vector 8 RGG.node[22] visitedPerTimestep ETV
-vector 9 RGG.node[16] visitedPerTimestep ETV
-vector 10 RGG.node[12] visitedPerTimestep ETV
-vector 11 RGG.node[1] visitedPerTimestep ETV
-vector 12 RGG.node[5] visitedPerTimestep ETV
-vector 13 RGG.node[47] visitedPerTimestep ETV
-vector 14 RGG.node[21] visitedPerTimestep ETV
-vector 15 RGG.node[33] visitedPerTimestep ETV
-vector 16 RGG.node[18] visitedPerTimestep ETV
-vector 17 RGG.node[2] visitedPerTimestep ETV
-vector 18 RGG.node[32] visitedPerTimestep ETV
-vector 19 RGG.node[41] visitedPerTimestep ETV
-vector 20 RGG.node[25] visitedPerTimestep ETV
-vector 21 RGG.node[39] visitedPerTimestep ETV
-vector 22 RGG.node[38] visitedPerTimestep ETV
-vector 23 RGG.node[7] visitedPerTimestep ETV
-vector 24 RGG.node[4] visitedPerTimestep ETV
-vector 25 RGG.node[42] visitedPerTimestep ETV
-vector 26 RGG.node[17] visitedPerTimestep ETV
-vector 27 RGG.node[27] visitedPerTimestep ETV
-vector 28 RGG.node[34] visitedPerTimestep ETV
-vector 29 RGG.node[19] visitedPerTimestep ETV
-vector 30 RGG.node[14] visitedPerTimestep ETV
-vector 31 RGG.node[36] visitedPerTimestep ETV
-vector 32 RGG.node[44] visitedPerTimestep ETV
-vector 33 RGG.node[3] visitedPerTimestep ETV
-vector 34 RGG.node[0] visitedPerTimestep ETV
-vector 35 RGG.node[49] visitedPerTimestep ETV
-vector 36 RGG.node[10] visitedPerTimestep ETV
-vector 37 RGG.node[26] visitedPerTimestep ETV
-vector 38 RGG.node[29] visitedPerTimestep ETV
-vector 39 RGG.node[8] visitedPerTimestep ETV
-vector 40 RGG.node[24] visitedPerTimestep ETV
-vector 41 RGG.node[11] visitedPerTimestep ETV
-vector 42 RGG.node[37] visitedPerTimestep ETV
-vector 43 RGG.node[45] visitedPerTimestep ETV
-vector 44 RGG.node[28] visitedPerTimestep ETV
-0	2	0	2
-0	64	0	31
-0	108	0	34
-0	112	0	34
-0	140	0	35
-0	222	0	43
-0	306	0	48
-0	354	0	49
-0	366	0	49
-0	376	0	49
-0	408	0	49
-1	4	0	4
-1	84	0	31
-1	92	0	33
-1	144	0	35
-1	392	0	49
-2	6	0	6
-2	118	0	34
-2	126	0	34
-2	214	0	43
-2	220	0	43
-2	352	0	49
-2	400	0	49
-3	8	0	8
-3	12	0	10
-3	28	0	21
-3	72	0	31
-3	78	0	31
-3	86	0	32
-3	174	0	35
-3	230	0	43
-3	302	0	48
-3	330	0	49
-3	360	0	49
-3	368	0	49
-3	390	0	49
-3	412	0	49
-4	10	0	10
-4	152	0	35
-4	190	0	35
-4	208	0	42
-4	268	0	47
-4	276	0	47
-4	414	0	49
-5	14	0	11
-5	130	0	35
-5	134	0	35
-5	172	0	35
-5	304	0	48
-5	364	0	49
-5	384	0	49
-5	388	0	49
-6	16	0	13
-6	82	0	31
-6	146	0	35
-6	154	0	35
-6	310	0	48
-6	314	0	48
-6	332	0	49
-6	362	0	49
-6	410	0	49
-7	18	0	15
-7	212	0	43
-7	284	0	47
-7	290	0	48
-7	340	0	49
-7	370	0	49
-8	20	0	17
-8	116	0	34
-8	120	0	34
-8	124	0	34
-8	374	0	49
-9	22	0	18
-9	110	0	34
-9	128	0	34
-9	378	0	49
-10	24	0	18
-10	60	0	31
-10	164	0	35
-10	168	0	35
-10	182	0	35
-10	394	0	49
-11	26	0	20
-11	142	0	35
-11	166	0	35
-11	170	0	35
-11	186	0	35
-11	210	0	42
-11	216	0	43
-11	226	0	43
-11	232	0	43
-12	30	0	21
-12	52	0	30
-12	56	0	31
-12	80	0	31
-12	88	0	33
-12	180	0	35
-12	288	0	48
-12	386	0	49
-12	418	0	49
-13	32	0	21
-13	50	0	30
-13	74	0	31
-13	236	0	43
-13	348	0	49
-13	404	0	49
-14	34	0	21
-14	96	0	33
-14	102	0	33
-14	178	0	35
-14	218	0	43
-14	346	0	49
-14	350	0	49
-14	398	0	49
-14	406	0	49
-15	36	0	22
-15	98	0	33
-16	38	0	23
-16	240	0	43
-17	40	0	24
-18	42	0	25
-19	44	0	26
-19	242	0	43
-19	246	0	43
-20	46	0	27
-21	48	0	29
-21	100	0	33
-22	54	0	31
-22	90	0	33
-22	234	0	43
-23	58	0	31
-23	76	0	31
-23	94	0	33
-23	104	0	33
-23	176	0	35
-23	282	0	47
-23	286	0	48
-23	342	0	49
-23	396	0	49
-23	420	0	49
-24	62	0	31
-24	138	0	35
-24	296	0	48
-24	322	0	48
-24	382	0	49
-25	66	0	31
-25	156	0	35
-25	228	0	43
-25	312	0	48
-25	336	0	49
-26	68	0	31
-26	150	0	35
-26	300	0	48
-26	316	0	48
-26	324	0	48
-26	328	0	49
-26	358	0	49
-27	70	0	31
-27	106	0	33
-27	148	0	35
-27	184	0	35
-27	188	0	35
-27	224	0	43
-27	278	0	47
-27	308	0	48
-27	344	0	49
-27	402	0	49
-27	422	0	50
-28	114	0	34
-28	320	0	48
-28	372	0	49
-29	122	0	34
-29	162	0	35
-29	292	0	48
-29	298	0	48
-30	132	0	35
-30	136	0	35
-30	160	0	35
-30	294	0	48
-31	158	0	35
-31	318	0	48
-31	338	0	49
-31	380	0	49
-32	192	0	36
-32	202	0	39
-32	256	0	45
-32	272	0	47
-33	194	0	37
-33	264	0	47
-34	196	0	38
-34	200	0	39
-34	204	0	39
-34	260	0	46
-35	198	0	39
-35	254	0	45
-35	270	0	47
-36	206	0	41
-36	252	0	45
-37	238	0	43
-38	244	0	43
-39	248	0	44
-40	250	0	45
-41	258	0	46
-41	266	0	47
-41	274	0	47
-42	262	0	47
-43	280	0	47
-43	334	0	49
-43	356	0	49
-43	416	0	49
-44	326	0	49
+vector 0 RGG.node[6] visitedPerTimestep ETV
+vector 1 RGG.node[31] visitedPerTimestep ETV
+vector 2 RGG.node[21] visitedPerTimestep ETV
+vector 3 RGG.node[39] visitedPerTimestep ETV
+vector 4 RGG.node[18] visitedPerTimestep ETV
+vector 5 RGG.node[23] visitedPerTimestep ETV
+vector 6 RGG.node[8] visitedPerTimestep ETV
+vector 7 RGG.node[41] visitedPerTimestep ETV
+vector 8 RGG.node[24] visitedPerTimestep ETV
+vector 9 RGG.node[32] visitedPerTimestep ETV
+vector 10 RGG.node[10] visitedPerTimestep ETV
+vector 11 RGG.node[44] visitedPerTimestep ETV
+vector 12 RGG.node[3] visitedPerTimestep ETV
+vector 13 RGG.node[49] visitedPerTimestep ETV
+vector 14 RGG.node[20] visitedPerTimestep ETV
+vector 15 RGG.node[26] visitedPerTimestep ETV
+vector 16 RGG.node[47] visitedPerTimestep ETV
+vector 17 RGG.node[5] visitedPerTimestep ETV
+vector 18 RGG.node[1] visitedPerTimestep ETV
+vector 19 RGG.node[9] visitedPerTimestep ETV
+vector 20 RGG.node[45] visitedPerTimestep ETV
+vector 21 RGG.node[4] visitedPerTimestep ETV
+vector 22 RGG.node[42] visitedPerTimestep ETV
+vector 23 RGG.node[35] visitedPerTimestep ETV
+vector 24 RGG.node[15] visitedPerTimestep ETV
+vector 25 RGG.node[16] visitedPerTimestep ETV
+vector 26 RGG.node[19] visitedPerTimestep ETV
+vector 27 RGG.node[22] visitedPerTimestep ETV
+vector 28 RGG.node[17] visitedPerTimestep ETV
+vector 29 RGG.node[46] visitedPerTimestep ETV
+vector 30 RGG.node[27] visitedPerTimestep ETV
+vector 31 RGG.node[14] visitedPerTimestep ETV
+vector 32 RGG.node[30] visitedPerTimestep ETV
+vector 33 RGG.node[48] visitedPerTimestep ETV
+vector 34 RGG.node[33] visitedPerTimestep ETV
+vector 35 RGG.node[28] visitedPerTimestep ETV
+vector 36 RGG.node[11] visitedPerTimestep ETV
+vector 37 RGG.node[0] visitedPerTimestep ETV
+vector 38 RGG.node[34] visitedPerTimestep ETV
+vector 39 RGG.node[36] visitedPerTimestep ETV
+vector 40 RGG.node[12] visitedPerTimestep ETV
+vector 41 RGG.node[38] visitedPerTimestep ETV
+vector 42 RGG.node[7] visitedPerTimestep ETV
+vector 43 RGG.node[13] visitedPerTimestep ETV
+vector 44 RGG.node[2] visitedPerTimestep ETV
+vector 45 RGG.node[29] visitedPerTimestep ETV
+0	1	0	1
+0	24	0	17
+0	68	0	39
+0	182	0	49
+0	238	0	49
+1	2	0	2
+1	148	0	47
+1	214	0	49
+2	3	0	3
+2	21	0	16
+2	122	0	45
+3	4	0	4
+4	5	0	5
+4	20	0	16
+4	116	0	44
+5	6	0	6
+6	7	0	7
+6	18	0	15
+6	23	0	17
+6	58	0	36
+6	174	0	48
+6	186	0	49
+7	8	0	8
+7	254	0	49
+8	9	0	9
+8	11	0	10
+9	10	0	10
+9	60	0	36
+10	12	0	11
+10	16	0	14
+10	246	0	49
+11	13	0	12
+11	102	0	44
+12	14	0	13
+12	76	0	41
+13	15	0	14
+14	17	0	15
+14	170	0	48
+15	19	0	16
+15	64	0	37
+15	118	0	45
+15	162	0	48
+16	22	0	17
+16	25	0	17
+16	56	0	35
+16	126	0	46
+16	146	0	47
+16	190	0	49
+17	26	0	18
+17	54	0	34
+17	106	0	44
+17	132	0	47
+17	136	0	47
+17	194	0	49
+18	27	0	19
+18	40	0	29
+18	230	0	49
+19	28	0	20
+19	70	0	39
+19	104	0	44
+20	29	0	21
+20	48	0	32
+20	82	0	43
+20	234	0	49
+21	30	0	22
+21	38	0	28
+21	90	0	43
+22	31	0	23
+22	43	0	30
+22	50	0	33
+22	86	0	43
+23	32	0	24
+23	138	0	47
+23	210	0	49
+24	33	0	25
+24	35	0	26
+24	108	0	44
+24	206	0	49
+25	34	0	26
+25	44	0	30
+25	92	0	43
+25	218	0	49
+26	36	0	27
+26	45	0	30
+26	140	0	47
+26	222	0	49
+27	37	0	28
+27	52	0	34
+27	88	0	43
+27	142	0	47
+28	39	0	29
+28	42	0	30
+28	94	0	43
+28	98	0	44
+29	41	0	30
+30	46	0	31
+30	144	0	47
+31	47	0	32
+32	49	0	33
+32	110	0	44
+32	124	0	45
+32	198	0	49
+32	226	0	49
+33	62	0	37
+33	154	0	48
+34	66	0	39
+34	120	0	45
+34	178	0	48
+35	72	0	40
+35	80	0	42
+35	100	0	44
+35	150	0	47
+36	74	0	41
+37	78	0	42
+38	84	0	43
+38	202	0	49
+39	96	0	44
+40	112	0	44
+41	114	0	44
+42	128	0	46
+43	130	0	47
+43	134	0	47
+44	158	0	48
+44	166	0	48
+44	242	0	49
+44	250	0	49
+45	258	0	50
 
