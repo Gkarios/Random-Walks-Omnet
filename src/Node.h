@@ -40,6 +40,7 @@ using namespace omnetpp;
     static std::vector<int> visitedPerTimestep;
     static int duplicationInterval;
     static bool enableDuplication;
+    static bool disableBacktracking;
     static int walkerIdCounter;
     // Node();
     // virtual ~Node();

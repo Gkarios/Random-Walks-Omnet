@@ -1,250 +1,3178 @@
 version 3
-run General-223-20250808-22:38:12-6746
+run General-223-20250904-14:13:18-15574
 attr configname General
-attr datetime 20250808-22:38:12
-attr datetimef 20250808-223812
+attr datetime 20250904-14:13:18
+attr datetimef 20250904-141318
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
-attr network RGG
-attr processid 6746
+attr network TaxiNetwork
+attr processid 15574
 attr repetition 223
 attr replication #223
 attr resultdir results
 attr runnumber 223
 attr seedset 223
-config network RGG
+config network TaxiNetwork
 config seed-set 223
 config num-rngs 1
 config sim-time-limit 10s
 config repeat 500
-config **.node[*].xCor "uniform(0.0, 1.0, 0)"
-config **.node[*].yCor "uniform(0.0, 1.0, 0)"
 config *.numWalkers 1
-config *.numNodes 50
 config *.enableDuplication true
-config *.rc 0.4
+config *.rc 700
+config **.node[0].xCor 2933
+config **.node[0].yCor 2747
+config **.node[1].xCor 2919
+config **.node[1].yCor 2817
+config **.node[2].xCor 2910
+config **.node[2].yCor 2861
+config **.node[3].xCor 2429
+config **.node[3].yCor 2851
+config **.node[4].xCor 2908
+config **.node[4].yCor 2714
+config **.node[5].xCor 2606
+config **.node[5].yCor 2722
+config **.node[6].xCor 2575
+config **.node[6].yCor 2753
+config **.node[7].xCor 2654
+config **.node[7].yCor 2513
+config **.node[8].xCor 2773
+config **.node[8].yCor 2580
+config **.node[9].xCor 3043
+config **.node[9].yCor 2780
+config **.node[10].xCor 3020
+config **.node[10].yCor 2813
+config **.node[11].xCor 2599
+config **.node[11].yCor 2300
+config **.node[12].xCor 2917
+config **.node[12].yCor 2698
+config **.node[13].xCor 2625
+config **.node[13].yCor 2641
+config **.node[14].xCor 2604
+config **.node[14].yCor 2790
+config **.node[15].xCor 2786
+config **.node[15].yCor 3082
+config **.node[16].xCor 2603
+config **.node[16].yCor 2802
+config **.node[17].xCor 2637
+config **.node[17].yCor 2869
+config **.node[18].xCor 2675
+config **.node[18].yCor 2955
+config **.node[19].xCor 2845
+config **.node[19].yCor 2937
+config **.node[20].xCor 2860
+config **.node[20].yCor 2888
+config **.node[21].xCor 2843
+config **.node[21].yCor 4158
+config **.node[22].xCor 2852
+config **.node[22].yCor 4017
+config **.node[23].xCor 2892
+config **.node[23].yCor 4961
+config **.node[24].xCor 2313
+config **.node[24].yCor 3993
+config **.node[25].xCor 2891
+config **.node[25].yCor 4959
+config **.node[26].xCor 2370
+config **.node[26].yCor 4050
+config **.node[27].xCor 2788
+config **.node[27].yCor 3958
+config **.node[28].xCor 2819
+config **.node[28].yCor 4428
+config **.node[29].xCor 2790
+config **.node[29].yCor 3761
+config **.node[30].xCor 2809
+config **.node[30].yCor 2908
+config **.node[31].xCor 2919
+config **.node[31].yCor 3575
+config **.node[32].xCor 2946
+config **.node[32].yCor 3466
+config **.node[33].xCor 2911
+config **.node[33].yCor 3453
+config **.node[34].xCor 2370
+config **.node[34].yCor 3656
+config **.node[35].xCor 2438
+config **.node[35].yCor 3738
+config **.node[36].xCor 2737
+config **.node[36].yCor 3570
+config **.node[37].xCor 2921
+config **.node[37].yCor 3698
+config **.node[38].xCor 2907
+config **.node[38].yCor 5197
+config **.node[39].xCor 2860
+config **.node[39].yCor 3852
+config **.node[40].xCor 2927
+config **.node[40].yCor 3684
+config **.node[41].xCor 3023
+config **.node[41].yCor 5313
+config **.node[42].xCor 3220
+config **.node[42].yCor 5811
+config **.node[43].xCor 3432
+config **.node[43].yCor 5715
+config **.node[44].xCor 2754
+config **.node[44].yCor 2463
+config **.node[45].xCor 2646
+config **.node[45].yCor 2673
+config **.node[46].xCor 3051
+config **.node[46].yCor 2792
+config **.node[47].xCor 1666
+config **.node[47].yCor 3697
+config **.node[48].xCor 1662
+config **.node[48].yCor 3694
+config **.node[49].xCor 1664
+config **.node[49].yCor 3667
+config **.node[50].xCor 1660
+config **.node[50].yCor 3664
+config **.node[51].xCor 1710
+config **.node[51].yCor 3573
+config **.node[52].xCor 2082
+config **.node[52].yCor 2650
+config **.node[53].xCor 2086
+config **.node[53].yCor 2657
+config **.node[54].xCor 2257
+config **.node[54].yCor 3232
+config **.node[55].xCor 2258
+config **.node[55].yCor 3225
+config **.node[56].xCor 1926
+config **.node[56].yCor 2570
+config **.node[57].xCor 1926
+config **.node[57].yCor 2576
+config **.node[58].xCor 2104
+config **.node[58].yCor 1758
+config **.node[59].xCor 1957
+config **.node[59].yCor 1826
+config **.node[60].xCor 3473
+config **.node[60].yCor 1523
+config **.node[61].xCor 3335
+config **.node[61].yCor 1726
+config **.node[62].xCor 3478
+config **.node[62].yCor 1517
+config **.node[63].xCor 3386
+config **.node[63].yCor 2119
+config **.node[64].xCor 3474
+config **.node[64].yCor 1762
+config **.node[65].xCor 3797
+config **.node[65].yCor 2099
+config **.node[66].xCor 3642
+config **.node[66].yCor 2136
+config **.node[67].xCor 3481
+config **.node[67].yCor 2334
+config **.node[68].xCor 3088
+config **.node[68].yCor 1505
+config **.node[69].xCor 3037
+config **.node[69].yCor 1693
+config **.node[70].xCor 3026
+config **.node[70].yCor 1700
+config **.node[71].xCor 3019
+config **.node[71].yCor 669
+config **.node[72].xCor 3513
+config **.node[72].yCor 1358
+config **.node[73].xCor 3545
+config **.node[73].yCor 1230
+config **.node[74].xCor 4228
+config **.node[74].yCor 4220
+config **.node[75].xCor 3379
+config **.node[75].yCor 1207
+config **.node[76].xCor 3596
+config **.node[76].yCor 963
+config **.node[77].xCor 3637
+config **.node[77].yCor 1188
+config **.node[78].xCor 3759
+config **.node[78].yCor 1030
+config **.node[79].xCor 2918
+config **.node[79].yCor 1455
+config **.node[80].xCor 2711
+config **.node[80].yCor 1297
+config **.node[81].xCor 439
+config **.node[81].yCor 1623
+config **.node[82].xCor 2857
+config **.node[82].yCor 3581
+config **.node[83].xCor 2858
+config **.node[83].yCor 3584
+config **.node[84].xCor 2999
+config **.node[84].yCor 2636
+config **.node[85].xCor 2905
+config **.node[85].yCor 2778
+config **.node[86].xCor 2653
+config **.node[86].yCor 2845
+config **.node[87].xCor 2864
+config **.node[87].yCor 2836
+config **.node[88].xCor 2426
+config **.node[88].yCor 2892
+config **.node[89].xCor 2964
+config **.node[89].yCor 2804
+config **.node[90].xCor 2586
+config **.node[90].yCor 3135
+config **.node[91].xCor 2864
+config **.node[91].yCor 2980
+config **.node[92].xCor 2527
+config **.node[92].yCor 3219
+config **.node[93].xCor 2863
+config **.node[93].yCor 3142
+config **.node[94].xCor 2485
+config **.node[94].yCor 3269
+config **.node[95].xCor 2653
+config **.node[95].yCor 1065
+config **.node[96].xCor 4062
+config **.node[96].yCor 400
+config **.node[97].xCor 5762
+config **.node[97].yCor 3023
+config **.node[98].xCor 1414
+config **.node[98].yCor 3461
+config **.node[99].xCor 2911
+config **.node[99].yCor 1737
+config **.node[100].xCor 2595
+config **.node[100].yCor 2299
+config **.node[101].xCor 2702
+config **.node[101].yCor 3419
+config **.node[102].xCor 2813
+config **.node[102].yCor 3307
+config **.node[103].xCor 2638
+config **.node[103].yCor 2258
+config **.node[104].xCor 2590
+config **.node[104].yCor 3125
+config **.node[105].xCor 1856
+config **.node[105].yCor 2990
+config **.node[106].xCor 1894
+config **.node[106].yCor 2239
+config **.node[107].xCor 383
+config **.node[107].yCor 1251
+config **.node[108].xCor 3447
+config **.node[108].yCor 5489
+config **.node[109].xCor 3450
+config **.node[109].yCor 5697
+config **.node[110].xCor 2719
+config **.node[110].yCor 1920
+config **.node[111].xCor 2085
+config **.node[111].yCor 2389
+config **.node[112].xCor 1910
+config **.node[112].yCor 2548
+config **.node[113].xCor 2069
+config **.node[113].yCor 2050
+config **.node[114].xCor 2184
+config **.node[114].yCor 2209
+config **.node[115].xCor 2278
+config **.node[115].yCor 2390
+config **.node[116].xCor 2249
+config **.node[116].yCor 2299
+config **.node[117].xCor 2356
+config **.node[117].yCor 2303
+config **.node[118].xCor 2192
+config **.node[118].yCor 2475
+config **.node[119].xCor 1720
+config **.node[119].yCor 2911
+config **.node[120].xCor 2400
+config **.node[120].yCor 2887
+config **.node[121].xCor 3344
+config **.node[121].yCor 1890
+config **.node[122].xCor 3136
+config **.node[122].yCor 2418
+config **.node[123].xCor 3243
+config **.node[123].yCor 2525
+config **.node[124].xCor 2396
+config **.node[124].yCor 1267
+config **.node[125].xCor 467
+config **.node[125].yCor 1875
+config **.node[126].xCor 3506
+config **.node[126].yCor 1221
+config **.node[127].xCor 1034
+config **.node[127].yCor 1474
+config **.node[128].xCor 2908
+config **.node[128].yCor 1784
+config **.node[129].xCor 2876
+config **.node[129].yCor 1761
+config **.node[130].xCor 2849
+config **.node[130].yCor 1795
+config **.node[131].xCor 3029
+config **.node[131].yCor 1859
+config **.node[132].xCor 2924
+config **.node[132].yCor 1848
+config **.node[133].xCor 3493
+config **.node[133].yCor 1559
+config **.node[134].xCor 2760
+config **.node[134].yCor 1761
+config **.node[135].xCor 1644
+config **.node[135].yCor 3755
+config **.node[136].xCor 1463
+config **.node[136].yCor 3432
+config **.node[137].xCor 2595
+config **.node[137].yCor 2849
+config **.node[138].xCor 2581
+config **.node[138].yCor 2867
+config **.node[139].xCor 2524
+config **.node[139].yCor 2911
+config **.node[140].xCor 2570
+config **.node[140].yCor 2924
+config **.node[141].xCor 2676
+config **.node[141].yCor 2890
+config **.node[142].xCor 2666
+config **.node[142].yCor 2876
+config **.node[143].xCor 3735
+config **.node[143].yCor 1726
+config **.node[144].xCor 1637
+config **.node[144].yCor 3438
 
-vector 0 RGG.node[6] visitedPerTimestep ETV
-vector 1 RGG.node[40] visitedPerTimestep ETV
-vector 2 RGG.node[47] visitedPerTimestep ETV
-vector 3 RGG.node[31] visitedPerTimestep ETV
-vector 4 RGG.node[4] visitedPerTimestep ETV
-vector 5 RGG.node[27] visitedPerTimestep ETV
-vector 6 RGG.node[36] visitedPerTimestep ETV
-vector 7 RGG.node[26] visitedPerTimestep ETV
-vector 8 RGG.node[19] visitedPerTimestep ETV
-vector 9 RGG.node[34] visitedPerTimestep ETV
-vector 10 RGG.node[7] visitedPerTimestep ETV
-vector 11 RGG.node[42] visitedPerTimestep ETV
-vector 12 RGG.node[2] visitedPerTimestep ETV
-vector 13 RGG.node[13] visitedPerTimestep ETV
-vector 14 RGG.node[15] visitedPerTimestep ETV
-vector 15 RGG.node[21] visitedPerTimestep ETV
-vector 16 RGG.node[17] visitedPerTimestep ETV
-vector 17 RGG.node[5] visitedPerTimestep ETV
-vector 18 RGG.node[1] visitedPerTimestep ETV
-vector 19 RGG.node[38] visitedPerTimestep ETV
-vector 20 RGG.node[41] visitedPerTimestep ETV
-vector 21 RGG.node[37] visitedPerTimestep ETV
-vector 22 RGG.node[11] visitedPerTimestep ETV
-vector 23 RGG.node[25] visitedPerTimestep ETV
-vector 24 RGG.node[10] visitedPerTimestep ETV
-vector 25 RGG.node[12] visitedPerTimestep ETV
-vector 26 RGG.node[32] visitedPerTimestep ETV
-vector 27 RGG.node[22] visitedPerTimestep ETV
-vector 28 RGG.node[0] visitedPerTimestep ETV
-vector 29 RGG.node[45] visitedPerTimestep ETV
-vector 30 RGG.node[35] visitedPerTimestep ETV
-vector 31 RGG.node[44] visitedPerTimestep ETV
-vector 32 RGG.node[24] visitedPerTimestep ETV
-vector 33 RGG.node[9] visitedPerTimestep ETV
-vector 34 RGG.node[20] visitedPerTimestep ETV
-vector 35 RGG.node[30] visitedPerTimestep ETV
-vector 36 RGG.node[14] visitedPerTimestep ETV
-vector 37 RGG.node[29] visitedPerTimestep ETV
-vector 38 RGG.node[43] visitedPerTimestep ETV
-vector 39 RGG.node[3] visitedPerTimestep ETV
-vector 40 RGG.node[16] visitedPerTimestep ETV
-vector 41 RGG.node[48] visitedPerTimestep ETV
-vector 42 RGG.node[33] visitedPerTimestep ETV
-vector 43 RGG.node[23] visitedPerTimestep ETV
-vector 44 RGG.node[46] visitedPerTimestep ETV
-vector 45 RGG.node[8] visitedPerTimestep ETV
+vector 0 TaxiNetwork.node[88] visitedPerTimestep ETV
+vector 1 TaxiNetwork.node[17] visitedPerTimestep ETV
+vector 2 TaxiNetwork.node[116] visitedPerTimestep ETV
+vector 3 TaxiNetwork.node[6] visitedPerTimestep ETV
+vector 4 TaxiNetwork.node[84] visitedPerTimestep ETV
+vector 5 TaxiNetwork.node[120] visitedPerTimestep ETV
+vector 6 TaxiNetwork.node[53] visitedPerTimestep ETV
+vector 7 TaxiNetwork.node[45] visitedPerTimestep ETV
+vector 8 TaxiNetwork.node[114] visitedPerTimestep ETV
+vector 9 TaxiNetwork.node[57] visitedPerTimestep ETV
+vector 10 TaxiNetwork.node[138] visitedPerTimestep ETV
+vector 11 TaxiNetwork.node[14] visitedPerTimestep ETV
+vector 12 TaxiNetwork.node[123] visitedPerTimestep ETV
+vector 13 TaxiNetwork.node[20] visitedPerTimestep ETV
+vector 14 TaxiNetwork.node[54] visitedPerTimestep ETV
+vector 15 TaxiNetwork.node[141] visitedPerTimestep ETV
+vector 16 TaxiNetwork.node[89] visitedPerTimestep ETV
+vector 17 TaxiNetwork.node[94] visitedPerTimestep ETV
+vector 18 TaxiNetwork.node[30] visitedPerTimestep ETV
+vector 19 TaxiNetwork.node[105] visitedPerTimestep ETV
+vector 20 TaxiNetwork.node[111] visitedPerTimestep ETV
+vector 21 TaxiNetwork.node[91] visitedPerTimestep ETV
+vector 22 TaxiNetwork.node[55] visitedPerTimestep ETV
+vector 23 TaxiNetwork.node[15] visitedPerTimestep ETV
+vector 24 TaxiNetwork.node[44] visitedPerTimestep ETV
+vector 25 TaxiNetwork.node[11] visitedPerTimestep ETV
+vector 26 TaxiNetwork.node[8] visitedPerTimestep ETV
+vector 27 TaxiNetwork.node[2] visitedPerTimestep ETV
+vector 28 TaxiNetwork.node[85] visitedPerTimestep ETV
+vector 29 TaxiNetwork.node[16] visitedPerTimestep ETV
+vector 30 TaxiNetwork.node[140] visitedPerTimestep ETV
+vector 31 TaxiNetwork.node[35] visitedPerTimestep ETV
+vector 32 TaxiNetwork.node[32] visitedPerTimestep ETV
+vector 33 TaxiNetwork.node[1] visitedPerTimestep ETV
+vector 34 TaxiNetwork.node[102] visitedPerTimestep ETV
+vector 35 TaxiNetwork.node[90] visitedPerTimestep ETV
+vector 36 TaxiNetwork.node[33] visitedPerTimestep ETV
+vector 37 TaxiNetwork.node[39] visitedPerTimestep ETV
+vector 38 TaxiNetwork.node[29] visitedPerTimestep ETV
+vector 39 TaxiNetwork.node[22] visitedPerTimestep ETV
+vector 40 TaxiNetwork.node[26] visitedPerTimestep ETV
+vector 41 TaxiNetwork.node[21] visitedPerTimestep ETV
+vector 42 TaxiNetwork.node[40] visitedPerTimestep ETV
+vector 43 TaxiNetwork.node[27] visitedPerTimestep ETV
+vector 44 TaxiNetwork.node[142] visitedPerTimestep ETV
+vector 45 TaxiNetwork.node[103] visitedPerTimestep ETV
+vector 46 TaxiNetwork.node[7] visitedPerTimestep ETV
+vector 47 TaxiNetwork.node[36] visitedPerTimestep ETV
+vector 48 TaxiNetwork.node[34] visitedPerTimestep ETV
+vector 49 TaxiNetwork.node[92] visitedPerTimestep ETV
+vector 50 TaxiNetwork.node[86] visitedPerTimestep ETV
+vector 51 TaxiNetwork.node[18] visitedPerTimestep ETV
+vector 52 TaxiNetwork.node[137] visitedPerTimestep ETV
+vector 53 TaxiNetwork.node[99] visitedPerTimestep ETV
+vector 54 TaxiNetwork.node[63] visitedPerTimestep ETV
+vector 55 TaxiNetwork.node[61] visitedPerTimestep ETV
+vector 56 TaxiNetwork.node[64] visitedPerTimestep ETV
+vector 57 TaxiNetwork.node[69] visitedPerTimestep ETV
+vector 58 TaxiNetwork.node[110] visitedPerTimestep ETV
+vector 59 TaxiNetwork.node[113] visitedPerTimestep ETV
+vector 60 TaxiNetwork.node[118] visitedPerTimestep ETV
+vector 61 TaxiNetwork.node[106] visitedPerTimestep ETV
+vector 62 TaxiNetwork.node[31] visitedPerTimestep ETV
+vector 63 TaxiNetwork.node[101] visitedPerTimestep ETV
+vector 64 TaxiNetwork.node[37] visitedPerTimestep ETV
+vector 65 TaxiNetwork.node[3] visitedPerTimestep ETV
+vector 66 TaxiNetwork.node[129] visitedPerTimestep ETV
+vector 67 TaxiNetwork.node[131] visitedPerTimestep ETV
+vector 68 TaxiNetwork.node[100] visitedPerTimestep ETV
+vector 69 TaxiNetwork.node[117] visitedPerTimestep ETV
+vector 70 TaxiNetwork.node[46] visitedPerTimestep ETV
+vector 71 TaxiNetwork.node[4] visitedPerTimestep ETV
+vector 72 TaxiNetwork.node[9] visitedPerTimestep ETV
+vector 73 TaxiNetwork.node[139] visitedPerTimestep ETV
+vector 74 TaxiNetwork.node[10] visitedPerTimestep ETV
+vector 75 TaxiNetwork.node[93] visitedPerTimestep ETV
+vector 76 TaxiNetwork.node[12] visitedPerTimestep ETV
+vector 77 TaxiNetwork.node[52] visitedPerTimestep ETV
+vector 78 TaxiNetwork.node[13] visitedPerTimestep ETV
+vector 79 TaxiNetwork.node[104] visitedPerTimestep ETV
+vector 80 TaxiNetwork.node[87] visitedPerTimestep ETV
+vector 81 TaxiNetwork.node[5] visitedPerTimestep ETV
+vector 82 TaxiNetwork.node[56] visitedPerTimestep ETV
+vector 83 TaxiNetwork.node[119] visitedPerTimestep ETV
+vector 84 TaxiNetwork.node[144] visitedPerTimestep ETV
+vector 85 TaxiNetwork.node[48] visitedPerTimestep ETV
+vector 86 TaxiNetwork.node[47] visitedPerTimestep ETV
+vector 87 TaxiNetwork.node[98] visitedPerTimestep ETV
+vector 88 TaxiNetwork.node[50] visitedPerTimestep ETV
+vector 89 TaxiNetwork.node[135] visitedPerTimestep ETV
+vector 90 TaxiNetwork.node[49] visitedPerTimestep ETV
+vector 91 TaxiNetwork.node[51] visitedPerTimestep ETV
+vector 92 TaxiNetwork.node[136] visitedPerTimestep ETV
+vector 93 TaxiNetwork.node[74] visitedPerTimestep ETV
+vector 94 TaxiNetwork.node[112] visitedPerTimestep ETV
+vector 95 TaxiNetwork.node[122] visitedPerTimestep ETV
+vector 96 TaxiNetwork.node[0] visitedPerTimestep ETV
+vector 97 TaxiNetwork.node[132] visitedPerTimestep ETV
+vector 98 TaxiNetwork.node[67] visitedPerTimestep ETV
+vector 99 TaxiNetwork.node[121] visitedPerTimestep ETV
+vector 100 TaxiNetwork.node[115] visitedPerTimestep ETV
+vector 101 TaxiNetwork.node[82] visitedPerTimestep ETV
+vector 102 TaxiNetwork.node[19] visitedPerTimestep ETV
+vector 103 TaxiNetwork.node[24] visitedPerTimestep ETV
+vector 104 TaxiNetwork.node[134] visitedPerTimestep ETV
+vector 105 TaxiNetwork.node[128] visitedPerTimestep ETV
+vector 106 TaxiNetwork.node[130] visitedPerTimestep ETV
+vector 107 TaxiNetwork.node[77] visitedPerTimestep ETV
+vector 108 TaxiNetwork.node[60] visitedPerTimestep ETV
+vector 109 TaxiNetwork.node[76] visitedPerTimestep ETV
+vector 110 TaxiNetwork.node[72] visitedPerTimestep ETV
+vector 111 TaxiNetwork.node[70] visitedPerTimestep ETV
+vector 112 TaxiNetwork.node[62] visitedPerTimestep ETV
+vector 113 TaxiNetwork.node[79] visitedPerTimestep ETV
+vector 114 TaxiNetwork.node[68] visitedPerTimestep ETV
+vector 115 TaxiNetwork.node[73] visitedPerTimestep ETV
+vector 116 TaxiNetwork.node[75] visitedPerTimestep ETV
+vector 117 TaxiNetwork.node[133] visitedPerTimestep ETV
+vector 118 TaxiNetwork.node[65] visitedPerTimestep ETV
+vector 119 TaxiNetwork.node[124] visitedPerTimestep ETV
+vector 120 TaxiNetwork.node[95] visitedPerTimestep ETV
+vector 121 TaxiNetwork.node[127] visitedPerTimestep ETV
+vector 122 TaxiNetwork.node[81] visitedPerTimestep ETV
+vector 123 TaxiNetwork.node[125] visitedPerTimestep ETV
+vector 124 TaxiNetwork.node[80] visitedPerTimestep ETV
+vector 125 TaxiNetwork.node[59] visitedPerTimestep ETV
+vector 126 TaxiNetwork.node[143] visitedPerTimestep ETV
+vector 127 TaxiNetwork.node[97] visitedPerTimestep ETV
+vector 128 TaxiNetwork.node[126] visitedPerTimestep ETV
+vector 129 TaxiNetwork.node[78] visitedPerTimestep ETV
+vector 130 TaxiNetwork.node[58] visitedPerTimestep ETV
+vector 131 TaxiNetwork.node[107] visitedPerTimestep ETV
+vector 132 TaxiNetwork.node[83] visitedPerTimestep ETV
+vector 133 TaxiNetwork.node[96] visitedPerTimestep ETV
+vector 134 TaxiNetwork.node[66] visitedPerTimestep ETV
+vector 135 TaxiNetwork.node[108] visitedPerTimestep ETV
+vector 136 TaxiNetwork.node[109] visitedPerTimestep ETV
+vector 137 TaxiNetwork.node[28] visitedPerTimestep ETV
+vector 138 TaxiNetwork.node[42] visitedPerTimestep ETV
+vector 139 TaxiNetwork.node[43] visitedPerTimestep ETV
+vector 140 TaxiNetwork.node[41] visitedPerTimestep ETV
+vector 141 TaxiNetwork.node[71] visitedPerTimestep ETV
+vector 142 TaxiNetwork.node[38] visitedPerTimestep ETV
+vector 143 TaxiNetwork.node[25] visitedPerTimestep ETV
+vector 144 TaxiNetwork.node[23] visitedPerTimestep ETV
 0	1	0	1
-0	96	0	40
-0	478	0	49
-0	526	0	49
+0	25	0	21
+0	64	0	45
+0	123	0	70
+0	127	0	71
+0	152	0	77
+0	261	0	94
+0	305	0	98
+0	424	0	104
+0	432	0	104
+0	621	0	127
+0	632	0	127
+0	686	0	128
+0	722	0	128
+0	766	0	128
+0	769	0	128
+0	799	0	128
+0	818	0	128
+0	841	0	128
+0	866	0	130
+0	950	0	132
+0	969	0	133
+0	1312	0	135
+0	2040	0	142
+0	2850	0	142
+0	3048	0	142
+0	3240	0	142
+0	3272	0	142
+0	3844	0	142
+0	4372	0	142
+0	4692	0	142
 1	2	0	2
+1	38	0	31
+1	100	0	62
+1	237	0	94
+1	354	0	101
+1	641	0	127
+1	703	0	128
+1	735	0	128
+1	764	0	128
+1	777	0	128
+1	825	0	128
+1	968	0	133
+1	1242	0	135
+1	1344	0	135
+1	1424	0	135
+1	1564	0	139
+1	1852	0	142
+1	2300	0	142
+1	2630	0	142
+1	3008	0	142
+1	3072	0	142
+1	3188	0	142
+1	3856	0	142
+1	4156	0	142
+1	4232	0	142
+1	4368	0	142
+1	4712	0	142
+1	5704	0	142
 2	3	0	3
+2	11	0	10
+2	122	0	70
+2	160	0	79
+2	433	0	104
+2	573	0	126
+2	734	0	128
+2	877	0	131
+2	902	0	131
+2	937	0	132
+2	2188	0	142
+2	3256	0	142
+2	3484	0	142
+2	3884	0	142
+2	4332	0	142
+2	4340	0	142
+2	4360	0	142
 3	4	0	4
-3	154	0	45
+3	137	0	73
+3	267	0	94
+3	285	0	96
+3	328	0	100
+3	352	0	101
+3	579	0	126
+3	631	0	127
+3	721	0	128
+3	938	0	132
+3	1244	0	135
+3	1288	0	135
+3	1370	0	135
+3	1562	0	139
+3	1596	0	139
+3	1638	0	139
+3	1796	0	142
+3	1810	0	142
+3	2014	0	142
+3	2436	0	142
+3	2560	0	142
+3	4120	0	142
+3	4168	0	142
+3	4216	0	142
+3	5284	0	142
+3	5492	0	142
 4	5	0	5
-4	84	0	38
+4	85	0	52
+4	746	0	128
+4	775	0	128
+4	864	0	130
+4	883	0	131
+4	904	0	131
+4	990	0	133
+4	1398	0	135
+4	1560	0	139
+4	1630	0	139
+4	1770	0	142
+4	1860	0	142
+4	1898	0	142
+4	2088	0	142
+4	2194	0	142
+4	2964	0	142
+4	3132	0	142
+4	3144	0	142
+4	3752	0	142
+4	3840	0	142
+4	4140	0	142
+4	4152	0	142
+4	4308	0	142
+4	4636	0	142
+4	5244	0	142
+4	5712	0	142
 5	6	0	6
+5	622	0	127
+5	693	0	128
+5	699	0	128
+5	783	0	128
+5	801	0	128
+5	830	0	128
+5	882	0	131
+5	941	0	132
+5	964	0	133
+5	1170	0	134
+5	1176	0	134
+5	1262	0	135
+5	1492	0	135
+5	1516	0	137
+5	1592	0	139
+5	1634	0	139
+5	1850	0	142
+5	2192	0	142
+5	2196	0	142
+5	2280	0	142
+5	2548	0	142
+5	3092	0	142
+5	3124	0	142
+5	3280	0	142
+5	3464	0	142
+5	3768	0	142
+5	4180	0	142
+5	4300	0	142
+5	4508	0	142
+5	4632	0	142
+5	5200	0	142
+5	5280	0	142
+5	5356	0	142
 6	7	0	7
-6	88	0	38
-6	486	0	49
+6	98	0	62
+6	155	0	79
+6	360	0	101
+6	425	0	104
+6	646	0	127
+6	712	0	128
+6	900	0	131
+6	944	0	132
+6	1138	0	134
+6	1308	0	135
+6	1602	0	139
+6	2096	0	142
+6	2254	0	142
+6	2356	0	142
+6	3016	0	142
+6	3248	0	142
+6	4236	0	142
+6	4560	0	142
+6	4724	0	142
+6	5532	0	142
 7	8	0	8
-7	92	0	39
-7	98	0	40
-7	502	0	49
+7	135	0	73
+7	277	0	96
+7	304	0	98
+7	344	0	101
+7	645	0	127
+7	797	0	128
+7	868	0	130
+7	985	0	133
+7	1480	0	135
+7	1520	0	138
+7	2084	0	142
+7	2232	0	142
+7	2308	0	142
+7	2636	0	142
+7	2860	0	142
+7	3036	0	142
+7	3180	0	142
+7	3356	0	142
+7	3784	0	142
+7	3800	0	142
+7	3944	0	142
+7	4620	0	142
 8	9	0	9
-8	100	0	41
-8	110	0	43
-8	114	0	44
-8	422	0	49
-8	510	0	49
+8	111	0	66
+8	268	0	94
+8	270	0	94
+8	444	0	107
+8	1286	0	135
+8	1408	0	135
+8	1930	0	142
+8	2292	0	142
+8	2416	0	142
+8	3492	0	142
+8	4336	0	142
 9	10	0	10
-9	170	0	47
-9	270	0	49
-10	11	0	11
-10	40	0	30
-10	108	0	43
-10	334	0	49
-10	390	0	49
-11	12	0	12
-11	124	0	44
-11	314	0	49
-12	13	0	13
-12	48	0	33
-12	250	0	49
-12	366	0	49
-13	14	0	14
-13	50	0	33
-13	120	0	44
-13	202	0	48
-13	246	0	49
-13	286	0	49
-13	462	0	49
-14	15	0	15
-14	21	0	19
-14	64	0	36
-14	266	0	49
-14	338	0	49
-15	16	0	16
-15	31	0	26
-15	44	0	32
-15	56	0	35
-15	72	0	36
-15	128	0	44
-15	274	0	49
-15	326	0	49
-16	17	0	17
-16	54	0	35
-16	118	0	44
-16	126	0	44
-16	258	0	49
-16	282	0	49
-16	302	0	49
-16	318	0	49
-16	342	0	49
-16	382	0	49
-17	18	0	18
-17	20	0	19
-17	38	0	29
-17	116	0	44
-17	262	0	49
-18	19	0	19
-18	22	0	19
-18	68	0	36
-18	106	0	43
-18	112	0	44
-18	142	0	45
-18	178	0	48
-18	398	0	49
+9	266	0	94
+9	273	0	95
+9	901	0	131
+9	954	0	132
+9	1142	0	134
+9	1256	0	135
+9	1260	0	135
+9	1298	0	135
+9	1302	0	135
+9	1598	0	139
+9	2226	0	142
+9	2358	0	142
+9	2418	0	142
+9	3052	0	142
+9	3260	0	142
+9	3472	0	142
+10	12	0	11
+10	102	0	62
+10	159	0	79
+10	232	0	93
+10	332	0	101
+10	342	0	101
+10	359	0	101
+10	684	0	128
+10	816	0	128
+10	870	0	130
+10	966	0	133
+10	1106	0	134
+10	1148	0	134
+10	1578	0	139
+10	1590	0	139
+10	1890	0	142
+10	2028	0	142
+10	2212	0	142
+10	2282	0	142
+10	3252	0	142
+10	3936	0	142
+10	4244	0	142
+10	4364	0	142
+10	5196	0	142
+11	13	0	12
+11	20	0	18
+11	116	0	69
+11	148	0	76
+11	247	0	94
+11	393	0	102
+11	401	0	103
+11	480	0	116
+11	604	0	127
+11	637	0	127
+11	664	0	127
+11	713	0	128
+11	742	0	128
+11	862	0	130
+11	905	0	131
+11	1180	0	134
+11	1248	0	135
+11	1416	0	135
+11	1472	0	135
+11	1580	0	139
+11	1814	0	142
+11	1858	0	142
+11	2312	0	142
+11	2316	0	142
+11	2434	0	142
+11	2440	0	142
+11	4752	0	142
+11	5216	0	142
+11	5256	0	142
+11	5536	0	142
+11	5604	0	142
+11	5684	0	142
+12	14	0	13
+12	43	0	34
+12	312	0	100
+12	395	0	102
+12	558	0	125
+12	707	0	128
+12	747	0	128
+12	823	0	128
+12	932	0	132
+12	1130	0	134
+12	1184	0	134
+12	1196	0	135
+12	1466	0	135
+12	1768	0	142
+12	2032	0	142
+12	2642	0	142
+12	2674	0	142
+12	3796	0	142
+12	4096	0	142
+12	4148	0	142
+12	4192	0	142
+12	4600	0	142
+12	4672	0	142
+12	4756	0	142
+12	5680	0	142
+13	15	0	14
+13	26	0	21
+13	124	0	70
+13	138	0	73
+13	341	0	101
+13	627	0	127
+13	635	0	127
+13	666	0	127
+13	696	0	128
+13	962	0	133
+13	975	0	133
+13	1102	0	134
+13	1172	0	134
+13	1212	0	135
+13	2248	0	142
+13	2646	0	142
+13	3916	0	142
+13	4144	0	142
+13	4492	0	142
+13	4860	0	142
+13	5312	0	142
+13	5696	0	142
+14	16	0	15
+14	39	0	31
+14	46	0	35
+14	76	0	49
+14	190	0	84
+14	248	0	94
+14	326	0	100
+14	417	0	104
+14	447	0	107
+14	483	0	116
+14	658	0	127
+14	700	0	128
+14	762	0	128
+14	1218	0	135
+14	1608	0	139
+14	1702	0	142
+14	1844	0	142
+14	2262	0	142
+14	2438	0	142
+14	2524	0	142
+14	3360	0	142
+14	4748	0	142
+15	17	0	16
+15	119	0	69
+15	140	0	73
+15	260	0	94
+15	289	0	96
+15	307	0	98
+15	351	0	101
+15	485	0	116
+15	504	0	116
+15	682	0	128
+15	690	0	128
+15	759	0	128
+15	774	0	128
+15	780	0	128
+15	888	0	131
+15	933	0	132
+15	992	0	133
+15	1354	0	135
+15	1400	0	135
+15	1444	0	135
+15	1828	0	142
+15	1832	0	142
+15	2214	0	142
+15	2348	0	142
+15	3244	0	142
+15	3312	0	142
+15	3776	0	142
+15	4128	0	142
+15	4240	0	142
+15	5560	0	142
+16	18	0	17
+16	37	0	31
+16	44	0	34
+16	177	0	79
+16	180	0	80
+16	625	0	127
+16	675	0	128
+16	773	0	128
+16	786	0	128
+16	881	0	131
+16	942	0	132
+16	959	0	132
+16	1108	0	134
+16	1164	0	134
+16	1206	0	135
+16	1426	0	135
+16	1566	0	139
+16	2626	0	142
+16	2960	0	142
+16	3332	0	142
+16	3824	0	142
+16	4208	0	142
+16	4256	0	142
+16	4472	0	142
+16	5552	0	142
+17	19	0	18
+17	22	0	19
+17	75	0	49
+17	139	0	73
+17	288	0	96
+17	315	0	100
+17	334	0	101
+17	343	0	101
+17	404	0	103
+17	495	0	116
+17	605	0	127
+17	714	0	128
+17	974	0	133
+17	1446	0	135
+17	1626	0	139
+17	1878	0	142
+17	2442	0	142
+17	3156	0	142
+17	3344	0	142
+17	4744	0	142
+18	21	0	19
+18	47	0	35
+18	118	0	69
+18	231	0	93
+18	238	0	94
+18	243	0	94
+18	488	0	116
+18	603	0	127
+18	609	0	127
+18	652	0	127
+18	681	0	128
+18	947	0	132
+18	965	0	133
+18	1198	0	135
+18	1222	0	135
+18	1470	0	135
+18	1522	0	138
+18	1642	0	139
+18	1816	0	142
+18	1820	0	142
+18	1826	0	142
+18	2132	0	142
+18	3804	0	142
+18	3832	0	142
+18	3924	0	142
+18	4172	0	142
+18	4624	0	142
+18	5296	0	142
+18	5500	0	142
 19	23	0	20
-19	130	0	44
-19	134	0	44
-19	144	0	45
-19	182	0	48
-19	198	0	48
-19	306	0	49
+19	211	0	93
+19	335	0	101
+19	899	0	131
+19	1266	0	135
+19	1304	0	135
+19	2224	0	142
+19	2456	0	142
+19	2486	0	142
 20	24	0	21
-20	32	0	26
-20	36	0	28
-20	74	0	36
-20	122	0	44
-20	132	0	44
-20	138	0	45
-20	158	0	46
-20	206	0	48
-20	238	0	49
-20	310	0	49
-21	25	0	22
-21	35	0	28
-21	190	0	48
-22	26	0	23
-22	76	0	36
-22	438	0	49
-23	27	0	24
-23	222	0	49
-23	230	0	49
-24	28	0	25
-24	30	0	26
-24	82	0	38
-25	29	0	26
-26	33	0	27
-27	34	0	28
-28	37	0	29
-29	39	0	30
-29	49	0	33
-29	290	0	49
-29	350	0	49
-30	41	0	31
-30	43	0	32
-30	46	0	32
-30	62	0	36
-30	66	0	36
-30	166	0	47
-30	518	0	49
-31	42	0	32
-31	45	0	32
-31	60	0	36
-31	140	0	45
-31	146	0	45
-31	150	0	45
-31	194	0	48
-31	454	0	49
-32	47	0	33
-32	58	0	35
-32	162	0	46
-33	52	0	35
-33	70	0	36
-33	298	0	49
-33	346	0	49
-33	374	0	49
-34	78	0	37
-34	174	0	48
-34	210	0	49
-34	330	0	49
-34	358	0	49
-34	406	0	49
-34	430	0	49
-35	80	0	38
-35	86	0	38
-35	226	0	49
-36	90	0	39
-36	494	0	49
-37	94	0	40
-38	102	0	41
-39	104	0	42
-39	278	0	49
-39	414	0	49
-39	470	0	49
-40	136	0	45
-40	148	0	45
-40	186	0	48
-40	242	0	49
-40	446	0	49
-41	214	0	49
-42	218	0	49
-43	234	0	49
-44	254	0	49
-44	322	0	49
-44	534	0	50
-45	294	0	49
+20	226	0	93
+20	398	0	102
+20	479	0	116
+20	574	0	126
+20	623	0	127
+20	732	0	128
+20	739	0	128
+20	871	0	130
+20	3284	0	142
+20	3296	0	142
+20	3444	0	142
+20	4384	0	142
+20	4696	0	142
+20	5528	0	142
+21	27	0	22
+21	51	0	36
+21	230	0	93
+21	235	0	94
+21	259	0	94
+21	313	0	100
+21	327	0	100
+21	402	0	103
+21	423	0	104
+21	494	0	116
+21	659	0	127
+21	670	0	127
+21	952	0	132
+21	1100	0	134
+21	1150	0	134
+21	1182	0	134
+21	1226	0	135
+21	1246	0	135
+21	1428	0	135
+21	1460	0	135
+21	1514	0	137
+21	1618	0	139
+21	1694	0	142
+21	1792	0	142
+21	2242	0	142
+21	2266	0	142
+21	2466	0	142
+21	4252	0	142
+21	4284	0	142
+21	4656	0	142
+22	28	0	23
+22	136	0	73
+22	249	0	94
+22	252	0	94
+22	324	0	100
+22	370	0	101
+22	380	0	101
+22	737	0	128
+22	765	0	128
+22	833	0	128
+22	895	0	131
+22	1570	0	139
+22	1774	0	142
+22	2264	0	142
+22	2862	0	142
+22	2880	0	142
+22	3352	0	142
+22	3772	0	142
+22	4176	0	142
+22	4504	0	142
+22	4644	0	142
+22	4688	0	142
+22	5496	0	142
+23	29	0	24
+23	68	0	47
+23	82	0	52
+23	103	0	62
+23	109	0	65
+23	422	0	104
+23	639	0	127
+23	677	0	128
+23	725	0	128
+23	793	0	128
+23	1076	0	134
+23	1224	0	135
+23	1358	0	135
+23	1490	0	135
+23	1536	0	139
+23	2532	0	142
+23	2568	0	142
+23	2596	0	142
+23	2852	0	142
+23	2870	0	142
+23	3088	0	142
+23	3760	0	142
+23	3928	0	142
+23	4304	0	142
+23	5404	0	142
+24	30	0	25
+24	134	0	73
+24	161	0	79
+24	330	0	100
+24	357	0	101
+24	443	0	107
+24	503	0	116
+24	602	0	127
+24	640	0	127
+24	784	0	128
+24	791	0	128
+24	804	0	128
+24	824	0	128
+24	993	0	133
+24	1154	0	134
+24	1586	0	139
+24	1632	0	139
+24	1640	0	139
+24	2022	0	142
+24	2236	0	142
+24	2258	0	142
+24	2656	0	142
+24	2848	0	142
+24	2854	0	142
+24	3104	0	142
+24	3828	0	142
+24	4376	0	142
+24	5212	0	142
+24	5424	0	142
+24	5544	0	142
+25	31	0	26
+25	66	0	46
+25	87	0	53
+25	112	0	66
+25	511	0	116
+25	591	0	126
+25	624	0	127
+25	662	0	127
+25	708	0	128
+25	812	0	128
+25	843	0	128
+25	873	0	130
+25	945	0	132
+25	1040	0	134
+25	1104	0	134
+25	1376	0	135
+25	1432	0	135
+25	1468	0	135
+25	1800	0	142
+25	1904	0	142
+25	2044	0	142
+25	2078	0	142
+25	2136	0	142
+25	2552	0	142
+25	2842	0	142
+25	2858	0	142
+25	2928	0	142
+25	3500	0	142
+25	3896	0	142
+25	4088	0	142
+25	4100	0	142
+25	4164	0	142
+25	4512	0	142
+25	4856	0	142
+26	32	0	27
+26	126	0	71
+26	240	0	94
+26	293	0	96
+26	383	0	102
+26	392	0	102
+26	419	0	104
+26	695	0	128
+26	814	0	128
+26	822	0	128
+26	840	0	128
+26	887	0	131
+26	1360	0	135
+26	1476	0	135
+26	1552	0	139
+26	1706	0	142
+26	2020	0	142
+26	2182	0	142
+26	2668	0	142
+26	3080	0	142
+26	3932	0	142
+26	4264	0	142
+26	4312	0	142
+26	4592	0	142
+26	5320	0	142
+27	33	0	28
+27	83	0	52
+27	228	0	93
+27	283	0	96
+27	318	0	100
+27	578	0	126
+27	608	0	127
+27	649	0	127
+27	665	0	127
+27	820	0	128
+27	835	0	128
+27	863	0	130
+27	946	0	132
+27	970	0	133
+27	1074	0	134
+27	1350	0	135
+27	1636	0	139
+27	1794	0	142
+27	2012	0	142
+27	2180	0	142
+27	2350	0	142
+27	2546	0	142
+27	3108	0	142
+27	3216	0	142
+27	3780	0	142
+27	3868	0	142
+27	3940	0	142
+27	4188	0	142
+27	4348	0	142
+27	4408	0	142
+27	5364	0	142
+27	5508	0	142
+28	34	0	29
+28	133	0	73
+28	181	0	80
+28	346	0	101
+28	384	0	102
+28	489	0	116
+28	678	0	128
+28	787	0	128
+28	838	0	128
+28	885	0	131
+28	1356	0	135
+28	1448	0	135
+28	2038	0	142
+28	2090	0	142
+28	2208	0	142
+28	4160	0	142
+28	5192	0	142
+28	5408	0	142
+28	5472	0	142
+28	5688	0	142
+29	35	0	30
+29	120	0	69
+29	144	0	74
+29	166	0	79
+29	280	0	96
+29	428	0	104
+29	492	0	116
+29	575	0	126
+29	698	0	128
+29	706	0	128
+29	819	0	128
+29	865	0	130
+29	1152	0	134
+29	1392	0	135
+29	1550	0	139
+29	1574	0	139
+29	2016	0	142
+29	2024	0	142
+29	2204	0	142
+29	2220	0	142
+29	2444	0	142
+29	2662	0	142
+29	3328	0	142
+29	4324	0	142
+29	4596	0	142
+30	36	0	31
+30	49	0	36
+30	338	0	101
+30	501	0	116
+30	610	0	127
+30	633	0	127
+30	770	0	128
+30	776	0	128
+30	815	0	128
+30	861	0	130
+30	869	0	130
+30	963	0	133
+30	1178	0	134
+30	1202	0	135
+30	1396	0	135
+30	1478	0	135
+30	1572	0	139
+30	2320	0	142
+30	2426	0	142
+30	2452	0	142
+30	2926	0	142
+30	3808	0	142
+30	3892	0	142
+30	4468	0	142
+30	4556	0	142
+30	4628	0	142
+30	4660	0	142
+30	5368	0	142
+30	5572	0	142
+31	40	0	32
+31	105	0	63
+31	174	0	79
+31	1096	0	134
+31	1120	0	134
+31	1880	0	142
+31	2526	0	142
+31	5452	0	142
+32	41	0	33
+32	80	0	51
+32	171	0	79
+32	175	0	79
+32	258	0	94
+32	496	0	116
+32	500	0	116
+32	702	0	128
+32	715	0	128
+32	892	0	131
+32	1092	0	134
+32	1098	0	134
+32	1204	0	135
+32	1232	0	135
+32	1366	0	135
+32	1524	0	138
+32	1542	0	139
+32	1836	0	142
+32	2324	0	142
+32	2448	0	142
+32	2872	0	142
+32	3200	0	142
+32	3308	0	142
+32	3456	0	142
+32	4396	0	142
+32	4456	0	142
+32	4496	0	142
+32	4652	0	142
+33	42	0	34
+33	50	0	36
+33	150	0	77
+33	169	0	79
+33	278	0	96
+33	333	0	101
+33	487	0	116
+33	651	0	127
+33	679	0	128
+33	688	0	128
+33	813	0	128
+33	1362	0	135
+33	1500	0	135
+33	1588	0	139
+33	2250	0	142
+33	2268	0	142
+33	2430	0	142
+33	2650	0	142
+33	2664	0	142
+33	3112	0	142
+33	3460	0	142
+33	3792	0	142
+33	3860	0	142
+33	4676	0	142
+33	5420	0	142
+33	5476	0	142
+33	5540	0	142
+33	5608	0	142
+34	45	0	35
+34	84	0	52
+34	141	0	73
+34	176	0	79
+34	253	0	94
+34	287	0	96
+34	317	0	100
+34	340	0	101
+34	390	0	102
+34	427	0	104
+34	576	0	126
+34	614	0	127
+34	889	0	131
+34	960	0	132
+34	1576	0	139
+34	1692	0	142
+34	1838	0	142
+34	1864	0	142
+34	2130	0	142
+34	2178	0	142
+34	2890	0	142
+34	2922	0	142
+34	3176	0	142
+34	3812	0	142
+34	4280	0	142
+34	5716	0	142
+35	48	0	36
+35	145	0	74
+35	339	0	101
+35	486	0	116
+35	788	0	128
+35	894	0	131
+35	988	0	133
+35	1072	0	134
+35	1290	0	135
+35	1368	0	135
+35	1830	0	142
+35	1900	0	142
+35	2108	0	142
+35	2124	0	142
+35	2128	0	142
+35	2244	0	142
+35	2450	0	142
+35	2562	0	142
+35	2666	0	142
+35	4212	0	142
+35	4316	0	142
+35	5260	0	142
+35	5568	0	142
+36	52	0	37
+36	62	0	44
+36	77	0	49
+36	322	0	100
+36	407	0	103
+36	771	0	128
+36	795	0	128
+36	1078	0	134
+36	1502	0	135
+36	1568	0	139
+36	1606	0	139
+36	1788	0	142
+36	2036	0	142
+36	2112	0	142
+36	2284	0	142
+36	2428	0	142
+36	2538	0	142
+36	2580	0	142
+36	4248	0	142
+36	4476	0	142
+36	4572	0	142
+36	5300	0	142
+36	5456	0	142
+37	53	0	38
+37	56	0	40
+37	172	0	79
+37	257	0	94
+37	413	0	104
+37	1116	0	134
+37	1530	0	139
+37	2114	0	142
+37	2600	0	142
+37	2892	0	142
+37	3164	0	142
+38	54	0	39
+38	71	0	49
+38	74	0	49
+38	414	0	104
+38	1876	0	142
+38	2530	0	142
+38	2574	0	142
+38	2608	0	142
+38	2912	0	142
+38	3204	0	142
+39	55	0	40
+39	73	0	49
+39	406	0	103
+39	498	0	116
+39	1084	0	134
+39	1872	0	142
+39	2896	0	142
+39	2900	0	142
+40	57	0	41
+40	60	0	43
+40	1784	0	142
+40	2336	0	142
+40	2604	0	142
+40	2610	0	142
+40	4444	0	142
+40	4484	0	142
+41	58	0	42
+41	497	0	116
+41	1486	0	135
+41	1870	0	142
+41	2338	0	142
+41	2572	0	142
+41	2886	0	142
+41	2902	0	142
+42	59	0	43
+42	410	0	103
+42	415	0	104
+42	499	0	116
+42	890	0	131
+42	2330	0	142
+42	2528	0	142
+42	4400	0	142
+42	5720	0	142
+43	61	0	44
+43	173	0	79
+43	891	0	131
+43	1082	0	134
+43	1526	0	138
+43	2344	0	142
+43	2578	0	142
+43	2874	0	142
+43	2904	0	142
+43	3196	0	142
+44	63	0	45
+44	164	0	79
+44	170	0	79
+44	244	0	94
+44	306	0	98
+44	319	0	100
+44	763	0	128
+44	834	0	128
+44	940	0	132
+44	967	0	133
+44	1236	0	135
+44	2100	0	142
+44	2274	0	142
+44	2618	0	142
+44	2638	0	142
+44	3084	0	142
+44	3184	0	142
+44	3852	0	142
+44	3904	0	142
+44	4136	0	142
+44	4616	0	142
+44	5588	0	142
+45	65	0	46
+45	185	0	81
+45	227	0	93
+45	269	0	94
+45	275	0	95
+45	291	0	96
+45	358	0	101
+45	478	0	116
+45	654	0	127
+45	709	0	128
+45	758	0	128
+45	817	0	128
+45	994	0	133
+45	1044	0	134
+45	1310	0	135
+45	1378	0	135
+45	1390	0	135
+45	1808	0	142
+45	2010	0	142
+45	2082	0	142
+45	2102	0	142
+45	2256	0	142
+45	2364	0	142
+45	2634	0	142
+45	2966	0	142
+45	3232	0	142
+45	3788	0	142
+45	3964	0	142
+45	5168	0	142
+45	5188	0	142
+45	5272	0	142
+45	5360	0	142
+45	5372	0	142
+46	67	0	47
+46	101	0	62
+46	129	0	71
+46	156	0	79
+46	229	0	93
+46	387	0	102
+46	399	0	102
+46	661	0	127
+46	687	0	128
+46	906	0	131
+46	1070	0	134
+46	1210	0	135
+46	1250	0	135
+46	1374	0	135
+46	2202	0	142
+46	2238	0	142
+46	2290	0	142
+46	4268	0	142
+46	4464	0	142
+46	5316	0	142
+46	5504	0	142
+46	5548	0	142
+47	69	0	48
+47	323	0	100
+47	408	0	103
+47	412	0	104
+47	668	0	127
+47	761	0	128
+47	1088	0	134
+47	1122	0	134
+47	1822	0	142
+47	1842	0	142
+47	1868	0	142
+47	2116	0	142
+47	2322	0	142
+47	2326	0	142
+47	2346	0	142
+47	2534	0	142
+47	2612	0	142
+47	2908	0	142
+47	2914	0	142
+47	3168	0	142
+47	4684	0	142
+47	5564	0	142
+48	70	0	49
+48	72	0	49
+48	106	0	63
+48	256	0	94
+48	405	0	103
+48	1094	0	134
+48	1118	0	134
+48	1778	0	142
+48	1782	0	142
+48	2120	0	142
+48	2894	0	142
+48	4500	0	142
+49	78	0	50
+49	158	0	79
+49	262	0	94
+49	281	0	96
+49	286	0	96
+49	350	0	101
+49	418	0	104
+49	421	0	104
+49	629	0	127
+49	667	0	127
+49	717	0	128
+49	832	0	128
+49	934	0	132
+49	949	0	132
+49	1548	0	139
+49	1882	0	142
+49	1892	0	142
+49	2118	0	142
+49	2218	0	142
+49	2286	0	142
+49	2558	0	142
+49	2624	0	142
+49	2652	0	142
+49	2866	0	142
+49	3212	0	142
+49	4392	0	142
+49	5416	0	142
+49	5432	0	142
+50	79	0	51
+50	151	0	77
+50	481	0	116
+50	613	0	127
+50	719	0	128
+50	956	0	132
+50	1160	0	134
+50	1234	0	135
+50	1456	0	135
+50	1604	0	139
+50	1696	0	142
+50	1772	0	142
+50	2166	0	142
+50	2460	0	142
+50	2480	0	142
+50	2584	0	142
+50	2672	0	142
+50	4564	0	142
+50	4704	0	142
+50	5236	0	142
+50	5700	0	142
+51	81	0	52
+51	167	0	79
+51	178	0	79
+51	284	0	96
+51	300	0	97
+51	345	0	101
+51	420	0	104
+51	510	0	116
+51	618	0	127
+51	701	0	128
+51	727	0	128
+51	789	0	128
+51	836	0	128
+51	1544	0	139
+51	1556	0	139
+51	2026	0	142
+51	2126	0	142
+51	2478	0	142
+51	2566	0	142
+51	2916	0	142
+51	3004	0	142
+51	3452	0	142
+51	3836	0	142
+51	4664	0	142
+51	4708	0	142
+51	5324	0	142
+51	5344	0	142
+51	5400	0	142
+52	86	0	53
+52	99	0	62
+52	117	0	69
+52	241	0	94
+52	245	0	94
+52	279	0	96
+52	282	0	96
+52	290	0	96
+52	298	0	97
+52	349	0	101
+52	484	0	116
+52	569	0	125
+52	626	0	127
+52	630	0	127
+52	767	0	128
+52	872	0	130
+52	879	0	131
+52	943	0	132
+52	1404	0	135
+52	1856	0	142
+52	2186	0	142
+52	2310	0	142
+52	2318	0	142
+52	2868	0	142
+52	3044	0	142
+52	3116	0	142
+52	3336	0	142
+52	3888	0	142
+52	4200	0	142
+52	5352	0	142
+53	88	0	54
+53	592	0	126
+53	756	0	128
+53	914	0	131
+53	978	0	133
+53	1724	0	142
+53	1728	0	142
+53	1760	0	142
+53	2008	0	142
+53	2046	0	142
+53	2844	0	142
+53	2930	0	142
+53	2934	0	142
+53	2938	0	142
+53	2968	0	142
+53	2980	0	142
+53	3592	0	142
+53	4836	0	142
+53	4972	0	142
+53	4980	0	142
+53	4988	0	142
+53	5068	0	142
+53	5140	0	142
+53	5636	0	142
+53	5656	0	142
+54	89	0	55
+54	560	0	125
+54	982	0	133
+54	1946	0	142
+54	1974	0	142
+54	2764	0	142
+54	2790	0	142
+54	2834	0	142
+54	3668	0	142
+54	3748	0	142
+54	4000	0	142
+54	4052	0	142
+54	4964	0	142
+54	5108	0	142
+54	5124	0	142
+55	90	0	56
+55	93	0	58
+55	438	0	105
+55	452	0	107
+55	534	0	121
+55	553	0	125
+55	582	0	126
+55	749	0	128
+55	848	0	128
+55	1004	0	133
+55	1748	0	142
+55	1976	0	142
+55	2000	0	142
+55	2004	0	142
+55	2696	0	142
+55	2710	0	142
+55	2734	0	142
+55	2936	0	142
+55	3572	0	142
+55	3672	0	142
+55	3692	0	142
+55	4532	0	142
+55	4832	0	142
+55	4884	0	142
+55	5012	0	142
+55	5112	0	142
+55	5136	0	142
+55	5144	0	142
+55	5176	0	142
+56	91	0	57
+56	915	0	131
+56	1036	0	134
+56	1322	0	135
+56	1436	0	135
+56	1714	0	142
+56	1726	0	142
+56	1762	0	142
+56	1950	0	142
+56	2678	0	142
+56	2716	0	142
+56	2744	0	142
+56	2820	0	142
+56	2952	0	142
+56	3720	0	142
+56	4776	0	142
+56	4796	0	142
+56	4848	0	142
+56	4952	0	142
+56	5016	0	142
+57	92	0	58
+57	437	0	105
+57	464	0	113
+57	477	0	116
+57	532	0	121
+57	549	0	125
+57	757	0	128
+57	809	0	128
+57	916	0	131
+57	1050	0	134
+57	1058	0	134
+57	1756	0	142
+57	1764	0	142
+57	1908	0	142
+57	1912	0	142
+57	1920	0	142
+57	1936	0	142
+57	2148	0	142
+57	2396	0	142
+57	2412	0	142
+57	2686	0	142
+57	2694	0	142
+57	2784	0	142
+57	2792	0	142
+57	2806	0	142
+57	4024	0	142
+57	5004	0	142
+57	5036	0	142
+57	5640	0	142
+57	5648	0	142
+58	94	0	59
+58	430	0	104
+58	434	0	104
+58	512	0	116
+58	561	0	125
+58	805	0	128
+58	811	0	128
+58	907	0	131
+58	1068	0	134
+58	1708	0	142
+58	1802	0	142
+58	1806	0	142
+58	1906	0	142
+58	1934	0	142
+58	1972	0	142
+58	2366	0	142
+58	2414	0	142
+58	2846	0	142
+58	2856	0	142
+58	2976	0	142
+58	3536	0	142
+58	3588	0	142
+58	4084	0	142
+58	4544	0	142
+58	5156	0	142
+59	95	0	60
+59	271	0	94
+59	397	0	102
+59	572	0	126
+59	1140	0	134
+59	1254	0	135
+59	3288	0	142
+59	3496	0	142
+59	5160	0	142
+59	5520	0	142
+60	96	0	61
+60	128	0	71
+60	336	0	101
+60	570	0	125
+60	655	0	127
+60	710	0	128
+60	878	0	131
+60	1854	0	142
+60	2362	0	142
+60	2454	0	142
+60	3028	0	142
+60	3076	0	142
+60	4132	0	142
+60	4296	0	142
+60	4700	0	142
+61	97	0	62
+61	1600	0	139
+61	3476	0	142
+61	3880	0	142
+62	104	0	63
+62	254	0	94
+62	409	0	103
+62	606	0	127
+62	1080	0	134
+62	1112	0	134
+62	1292	0	135
+62	1546	0	139
+62	1620	0	139
+62	1624	0	139
+62	1866	0	142
+62	2122	0	142
+62	2592	0	142
+62	2888	0	142
+62	5596	0	142
+63	107	0	64
+63	142	0	73
+63	321	0	100
+63	403	0	103
+63	482	0	116
+63	669	0	127
+63	685	0	128
+63	760	0	128
+63	957	0	132
+63	1162	0	134
+63	1458	0	135
+63	1622	0	139
+63	3192	0	142
+63	4404	0	142
+63	4436	0	142
+63	4568	0	142
+63	4580	0	142
+63	5592	0	142
+64	108	0	65
+64	255	0	94
+64	794	0	128
+64	893	0	131
+64	1090	0	134
+64	1114	0	134
+64	1488	0	135
+64	1534	0	139
+64	1540	0	139
+64	1840	0	142
+64	2334	0	142
+64	2570	0	142
+64	2606	0	142
+64	2876	0	142
+64	2884	0	142
+64	2910	0	142
+64	3208	0	142
+64	4440	0	142
+64	4452	0	142
+64	4480	0	142
+64	5436	0	142
+65	110	0	66
+65	182	0	80
+65	265	0	94
+65	320	0	100
+65	507	0	116
+65	620	0	127
+65	644	0	127
+65	958	0	132
+65	973	0	133
+65	1146	0	134
+65	1228	0	135
+65	1296	0	135
+65	1300	0	135
+65	1518	0	138
+65	1584	0	139
+65	2094	0	142
+65	2106	0	142
+65	2168	0	142
+65	2200	0	142
+65	2216	0	142
+65	2228	0	142
+65	2298	0	142
+65	2302	0	142
+65	2424	0	142
+65	2458	0	142
+65	2476	0	142
+65	2588	0	142
+65	2616	0	142
+65	3236	0	142
+65	3276	0	142
+65	3488	0	142
+65	3908	0	142
+65	4220	0	142
+65	4228	0	142
+65	4320	0	142
+65	4640	0	142
+65	5288	0	142
+65	5308	0	142
+65	5340	0	142
+65	5584	0	142
+65	5708	0	142
+66	113	0	67
+66	525	0	119
+66	545	0	124
+66	563	0	125
+66	585	0	126
+66	590	0	126
+66	810	0	128
+66	930	0	132
+66	995	0	133
+66	1052	0	134
+66	1338	0	135
+66	1434	0	135
+66	1712	0	142
+66	2368	0	142
+66	2932	0	142
+66	2954	0	142
+66	2972	0	142
+66	2986	0	142
+66	3540	0	142
+66	3608	0	142
+66	3640	0	142
+66	3696	0	142
+66	4036	0	142
+66	4104	0	142
+66	4516	0	142
+66	4904	0	142
+66	4916	0	142
+67	114	0	68
+67	311	0	100
+67	436	0	105
+67	462	0	113
+67	514	0	116
+67	516	0	116
+67	554	0	125
+67	601	0	127
+67	844	0	128
+67	856	0	130
+67	977	0	133
+67	1722	0	142
+67	1968	0	142
+67	2076	0	142
+67	2146	0	142
+67	2160	0	142
+67	2404	0	142
+67	2708	0	142
+67	2942	0	142
+67	3992	0	142
+67	4092	0	142
+67	4840	0	142
+67	4852	0	142
+67	5104	0	142
+67	5228	0	142
+67	5392	0	142
+68	115	0	69
+68	131	0	72
+68	162	0	79
+68	186	0	81
+68	242	0	94
+68	301	0	97
+68	396	0	102
+68	450	0	107
+68	506	0	116
+68	647	0	127
+68	704	0	128
+68	803	0	128
+68	857	0	130
+68	903	0	131
+68	931	0	132
+68	1168	0	134
+68	1316	0	135
+68	1340	0	135
+68	1406	0	135
+68	1928	0	142
+68	2164	0	142
+68	2660	0	142
+68	2956	0	142
+68	3012	0	142
+68	3148	0	142
+68	3292	0	142
+68	3300	0	142
+68	3448	0	142
+68	4112	0	142
+68	4548	0	142
+68	4608	0	142
+68	4728	0	142
+68	5164	0	142
+68	5220	0	142
+68	5396	0	142
+68	5468	0	142
+68	5480	0	142
+68	5612	0	142
+69	121	0	70
+69	165	0	79
+69	337	0	101
+69	356	0	101
+69	431	0	104
+69	876	0	131
+69	936	0	132
+69	1452	0	135
+69	2294	0	142
+69	2306	0	142
+69	2472	0	142
+69	3024	0	142
+69	3120	0	142
+69	3876	0	142
+70	125	0	71
+70	294	0	96
+70	296	0	96
+70	347	0	101
+70	611	0	127
+70	616	0	127
+70	619	0	127
+70	697	0	128
+70	743	0	128
+70	827	0	128
+70	991	0	133
+70	1158	0	134
+70	1394	0	135
+70	1464	0	135
+70	1884	0	142
+70	1896	0	142
+70	2110	0	142
+70	2134	0	142
+70	2920	0	142
+70	3040	0	142
+70	3060	0	142
+70	3304	0	142
+70	3956	0	142
+70	4668	0	142
+70	4864	0	142
+70	5576	0	142
+71	130	0	72
+71	168	0	79
+71	676	0	128
+71	705	0	128
+71	718	0	128
+71	860	0	130
+71	886	0	131
+71	989	0	133
+71	1214	0	135
+71	1240	0	135
+71	1414	0	135
+71	1420	0	135
+71	2030	0	142
+71	2184	0	142
+71	2288	0	142
+71	2482	0	142
+71	2556	0	142
+71	2924	0	142
+71	3948	0	142
+71	4612	0	142
+71	4868	0	142
+71	5208	0	142
+71	5488	0	142
+71	5556	0	142
+72	132	0	73
+72	493	0	116
+72	580	0	126
+72	642	0	127
+72	723	0	128
+72	987	0	133
+72	1342	0	135
+72	1698	0	142
+72	1886	0	142
+72	2034	0	142
+72	2086	0	142
+72	2550	0	142
+72	2628	0	142
+72	2658	0	142
+72	3320	0	142
+72	3864	0	142
+72	4260	0	142
+72	4288	0	142
+72	5328	0	142
+73	143	0	74
+73	274	0	95
+73	299	0	97
+73	316	0	100
+73	509	0	116
+73	736	0	128
+73	740	0	128
+73	778	0	128
+73	785	0	128
+73	790	0	128
+73	798	0	128
+73	821	0	128
+73	884	0	131
+73	1418	0	135
+73	1704	0	142
+73	1818	0	142
+73	1834	0	142
+73	1846	0	142
+73	2222	0	142
+73	2260	0	142
+73	2484	0	142
+73	2586	0	142
+73	2614	0	142
+73	2622	0	142
+73	3020	0	142
+73	3816	0	142
+73	3872	0	142
+73	4292	0	142
+73	4344	0	142
+73	4460	0	142
+73	5248	0	142
+74	146	0	75
+74	184	0	81
+74	236	0	94
+74	246	0	94
+74	292	0	96
+74	308	0	98
+74	329	0	100
+74	617	0	127
+74	643	0	127
+74	650	0	127
+74	653	0	127
+74	720	0	128
+74	745	0	128
+74	779	0	128
+74	796	0	128
+74	880	0	131
+74	1126	0	134
+74	1132	0	134
+74	1352	0	135
+74	1558	0	139
+74	2446	0	142
+74	2544	0	142
+74	5264	0	142
+74	5412	0	142
+75	147	0	76
+75	233	0	93
+75	295	0	96
+75	382	0	102
+75	491	0	116
+75	577	0	126
+75	607	0	127
+75	636	0	127
+75	671	0	127
+75	680	0	128
+75	839	0	128
+75	972	0	133
+75	986	0	133
+75	1110	0	134
+75	1124	0	134
+75	1220	0	135
+75	1238	0	135
+75	1348	0	135
+75	1496	0	135
+75	1554	0	139
+75	1610	0	139
+75	1894	0	142
+75	2092	0	142
+75	2332	0	142
+75	2422	0	142
+75	2542	0	142
+75	2594	0	142
+75	3136	0	142
+75	3172	0	142
+75	4584	0	142
+75	4648	0	142
+75	5348	0	142
+75	5440	0	142
+75	5724	0	142
+76	149	0	77
+76	239	0	94
+76	263	0	94
+76	502	0	116
+76	615	0	127
+76	792	0	128
+76	935	0	132
+76	1200	0	135
+76	1412	0	135
+76	1848	0	142
+76	2432	0	142
+76	2470	0	142
+76	2564	0	142
+76	2648	0	142
+76	3068	0	142
+76	4116	0	142
+76	5184	0	142
+76	5580	0	142
+76	5672	0	142
+77	153	0	78
+77	163	0	79
+77	355	0	101
+77	449	0	107
+77	505	0	116
+77	657	0	127
+77	683	0	128
+77	729	0	128
+77	829	0	128
+77	939	0	132
+77	1252	0	135
+77	1284	0	135
+77	1454	0	135
+77	1902	0	142
+77	2042	0	142
+77	2190	0	142
+77	2230	0	142
+77	2314	0	142
+77	2670	0	142
+77	3268	0	142
+77	4328	0	142
+77	5516	0	142
+78	154	0	79
+78	157	0	79
+78	264	0	94
+78	388	0	102
+78	445	0	107
+78	490	0	116
+78	628	0	127
+78	638	0	127
+78	663	0	127
+78	802	0	128
+78	828	0	128
+78	948	0	132
+78	1216	0	135
+78	1410	0	135
+78	2104	0	142
+78	2206	0	142
+78	2234	0	142
+78	2296	0	142
+78	2354	0	142
+78	2640	0	142
+78	2644	0	142
+78	3032	0	142
+78	3100	0	142
+78	3140	0	142
+78	3224	0	142
+78	3756	0	142
+78	3912	0	142
+78	5252	0	142
+78	5292	0	142
+78	5512	0	142
+79	179	0	80
+79	386	0	102
+79	389	0	102
+79	426	0	104
+79	446	0	107
+79	634	0	127
+79	716	0	128
+79	724	0	128
+79	741	0	128
+79	831	0	128
+79	1294	0	135
+79	1346	0	135
+79	1442	0	135
+79	1482	0	135
+79	1700	0	142
+79	2252	0	142
+79	2590	0	142
+80	183	0	81
+80	385	0	102
+80	394	0	102
+80	612	0	127
+80	648	0	127
+80	726	0	128
+80	768	0	128
+80	772	0	128
+80	867	0	130
+80	951	0	132
+80	1128	0	134
+80	1134	0	134
+80	1166	0	134
+80	1314	0	135
+80	1364	0	135
+80	1430	0	135
+80	1494	0	135
+80	1582	0	139
+80	1644	0	139
+80	1798	0	142
+80	2018	0	142
+80	2170	0	142
+80	2240	0	142
+80	2270	0	142
+80	2278	0	142
+80	2582	0	142
+80	2620	0	142
+80	2918	0	142
+80	3064	0	142
+80	3128	0	142
+80	3324	0	142
+80	3820	0	142
+80	3920	0	142
+80	3952	0	142
+80	4276	0	142
+80	4412	0	142
+80	4576	0	142
+80	4588	0	142
+80	4732	0	142
+80	5668	0	142
+81	187	0	82
+81	314	0	100
+81	348	0	101
+81	391	0	102
+81	508	0	116
+81	689	0	128
+81	728	0	128
+81	858	0	130
+81	953	0	132
+81	1136	0	134
+81	1450	0	135
+81	2272	0	142
+81	2420	0	142
+81	2464	0	142
+81	2554	0	142
+81	2864	0	142
+81	3056	0	142
+81	3348	0	142
+81	3764	0	142
+81	4124	0	142
+81	4196	0	142
+81	4204	0	142
+81	4272	0	142
+81	4352	0	142
+81	4388	0	142
+81	4736	0	142
+81	5268	0	142
+81	5276	0	142
+81	5428	0	142
+82	188	0	83
+82	656	0	127
+82	711	0	128
+82	731	0	128
+82	782	0	128
+82	2198	0	142
+82	2474	0	142
+82	3480	0	142
+83	189	0	84
+83	225	0	93
+83	325	0	100
+83	361	0	101
+83	363	0	101
+83	448	0	107
+83	730	0	128
+83	738	0	128
+83	1258	0	135
+83	1282	0	135
+83	1306	0	135
+83	2360	0	142
+83	3440	0	142
+84	191	0	85
+84	215	0	93
+84	250	0	94
+84	369	0	101
+84	371	0	101
+84	379	0	101
+84	896	0	131
+84	2488	0	142
+84	2522	0	142
+84	3364	0	142
+84	3404	0	142
+84	3428	0	142
+85	192	0	86
+85	204	0	93
+85	222	0	93
+85	1274	0	135
+85	1278	0	135
+85	2512	0	142
+85	2516	0	142
+86	193	0	87
+86	195	0	88
+86	199	0	91
+86	206	0	93
+86	209	0	93
+86	221	0	93
+86	366	0	101
+86	1276	0	135
+86	2490	0	142
+86	2494	0	142
+86	2504	0	142
+86	2508	0	142
+86	3368	0	142
+86	3376	0	142
+86	3416	0	142
+86	3432	0	142
+87	194	0	88
+87	208	0	93
+87	218	0	93
+87	367	0	101
+87	1268	0	135
+87	2518	0	142
+87	3396	0	142
+87	3420	0	142
+88	196	0	89
+88	203	0	93
+88	365	0	101
+88	376	0	101
+88	378	0	101
+88	897	0	131
+88	2498	0	142
+88	3372	0	142
+88	3380	0	142
+88	3412	0	142
+89	197	0	90
+89	207	0	93
+89	213	0	93
+89	216	0	93
+89	220	0	93
+89	374	0	101
+89	2496	0	142
+90	198	0	91
+90	202	0	93
+90	205	0	93
+90	372	0	101
+90	1270	0	135
+90	2492	0	142
+90	2500	0	142
+90	2510	0	142
+90	3392	0	142
+90	3408	0	142
+90	3424	0	142
+91	200	0	92
+91	212	0	93
+91	217	0	93
+91	223	0	93
+91	251	0	94
+91	362	0	101
+91	368	0	101
+91	377	0	101
+91	1776	0	142
+91	2502	0	142
+91	2514	0	142
+91	2520	0	142
+91	3388	0	142
+91	3400	0	142
+91	3436	0	142
+92	201	0	93
+92	210	0	93
+92	214	0	93
+92	219	0	93
+92	224	0	93
+92	364	0	101
+92	373	0	101
+92	375	0	101
+92	898	0	131
+92	1272	0	135
+92	1280	0	135
+92	2506	0	142
+92	3384	0	142
+93	234	0	94
+93	672	0	127
+93	674	0	128
+93	1506	0	135
+93	1512	0	137
+93	1612	0	139
+93	1616	0	139
+93	1646	0	139
+93	1660	0	141
+93	1664	0	141
+93	1690	0	142
+93	2172	0	142
+93	2176	0	142
+93	4416	0	142
+93	4424	0	142
+93	4432	0	142
+93	5444	0	142
+93	5728	0	142
+93	5736	0	142
+93	5744	0	142
+94	272	0	95
+94	692	0	128
+94	733	0	128
+94	1264	0	135
+94	1594	0	139
+94	2304	0	142
+94	3264	0	142
+94	3468	0	142
+94	4224	0	142
+94	4720	0	142
+95	276	0	96
+95	303	0	98
+95	353	0	101
+95	568	0	125
+95	976	0	133
+95	984	0	133
+95	1156	0	134
+95	1422	0	135
+95	3228	0	142
+95	3316	0	142
+95	5232	0	142
+95	5332	0	142
+95	5484	0	142
+95	5664	0	142
+96	297	0	97
+96	660	0	127
+96	694	0	128
+96	744	0	128
+96	837	0	128
+96	859	0	130
+96	1174	0	134
+96	1208	0	135
+96	1402	0	135
+96	1440	0	135
+96	1628	0	139
+96	1862	0	142
+96	1888	0	142
+96	2210	0	142
+96	2276	0	142
+96	2468	0	142
+96	2632	0	142
+96	2654	0	142
+96	3220	0	142
+96	3960	0	142
+96	4184	0	142
+96	4552	0	142
+96	4604	0	142
+96	4740	0	142
+96	5336	0	142
+96	5676	0	142
+96	5692	0	142
+97	302	0	98
+97	439	0	105
+97	517	0	116
+97	555	0	125
+97	589	0	126
+97	600	0	127
+97	908	0	131
+97	910	0	131
+97	1046	0	134
+97	2002	0	142
+97	2072	0	142
+97	2138	0	142
+97	2158	0	142
+97	2386	0	142
+97	2978	0	142
+97	2984	0	142
+97	3512	0	142
+97	3520	0	142
+97	3548	0	142
+97	3576	0	142
+97	4880	0	142
+97	4940	0	142
+97	5384	0	142
+97	5632	0	142
+98	309	0	99
+98	559	0	125
+98	581	0	126
+98	847	0	128
+98	1438	0	135
+98	1948	0	142
+98	2822	0	142
+98	2826	0	142
+98	2962	0	142
+98	3000	0	142
+98	3988	0	142
+98	4872	0	142
+98	5180	0	142
+99	310	0	100
+99	533	0	121
+99	598	0	127
+99	755	0	128
+99	919	0	131
+99	983	0	133
+99	1066	0	134
+99	1186	0	134
+99	1320	0	135
+99	1718	0	142
+99	1732	0	142
+99	1750	0	142
+99	1766	0	142
+99	1804	0	142
+99	1996	0	142
+99	2398	0	142
+99	2738	0	142
+99	2756	0	142
+99	2786	0	142
+99	2796	0	142
+99	2830	0	142
+99	3516	0	142
+99	3552	0	142
+99	3580	0	142
+99	3648	0	142
+99	3728	0	142
+99	3972	0	142
+99	3984	0	142
+99	3996	0	142
+99	4012	0	142
+99	4048	0	142
+99	4060	0	142
+99	4768	0	142
+99	4800	0	142
+99	4876	0	142
+99	4944	0	142
+99	4968	0	142
+99	5100	0	142
+100	331	0	101
+100	429	0	104
+100	691	0	128
+100	781	0	128
+100	842	0	128
+100	955	0	132
+100	1144	0	134
+100	1474	0	135
+100	2098	0	142
+100	4356	0	142
+100	4380	0	142
+100	4716	0	142
+101	381	0	102
+101	416	0	104
+101	1086	0	134
+101	1484	0	135
+101	1614	0	139
+101	1790	0	142
+101	2342	0	142
+101	2878	0	142
+101	2898	0	142
+101	2906	0	142
+101	5460	0	142
+102	400	0	103
+102	800	0	128
+102	826	0	128
+102	971	0	133
+102	1230	0	135
+102	1372	0	135
+102	1462	0	135
+102	1498	0	135
+102	1812	0	142
+102	2246	0	142
+102	2352	0	142
+102	2462	0	142
+102	2958	0	142
+102	3096	0	142
+102	3152	0	142
+102	3340	0	142
+102	3848	0	142
+102	3900	0	142
+102	4680	0	142
+102	5204	0	142
+102	5240	0	142
+102	5304	0	142
+102	5464	0	142
+102	5600	0	142
+103	411	0	104
+103	2340	0	142
+103	4448	0	142
+104	435	0	105
+104	441	0	106
+104	538	0	121
+104	874	0	130
+104	911	0	131
+104	913	0	131
+104	923	0	131
+104	1914	0	142
+104	1998	0	142
+104	2048	0	142
+104	2080	0	142
+104	2144	0	142
+104	2156	0	142
+104	2162	0	142
+104	2388	0	142
+104	2392	0	142
+104	3632	0	142
+104	4908	0	142
+104	4992	0	142
+104	5000	0	142
+104	5376	0	142
+105	440	0	106
+105	451	0	107
+105	552	0	125
+105	998	0	133
+105	1038	0	134
+105	1318	0	135
+105	1380	0	135
+105	1384	0	135
+105	1916	0	142
+105	1922	0	142
+105	1926	0	142
+105	1944	0	142
+105	2074	0	142
+105	2370	0	142
+105	2406	0	142
+105	2740	0	142
+105	2832	0	142
+105	2836	0	142
+105	2940	0	142
+105	3508	0	142
+105	3652	0	142
+105	3664	0	142
+105	4032	0	142
+105	4044	0	142
+105	4844	0	142
+105	5172	0	142
+105	5224	0	142
+105	5620	0	142
+106	442	0	107
+106	463	0	113
+106	567	0	125
+106	909	0	131
+106	979	0	133
+106	1042	0	134
+106	2142	0	142
+106	2684	0	142
+106	2840	0	142
+106	3504	0	142
+106	3532	0	142
+106	3596	0	142
+106	3604	0	142
+106	3660	0	142
+106	3700	0	142
+106	3736	0	142
+106	3968	0	142
+106	4008	0	142
+106	4080	0	142
+106	4108	0	142
+106	4540	0	142
+106	5072	0	142
+106	5388	0	142
+106	5616	0	142
+106	5660	0	142
+107	453	0	108
+107	457	0	111
+107	469	0	113
+107	474	0	115
+107	851	0	129
+107	1006	0	133
+107	1022	0	134
+107	1026	0	134
+107	1032	0	134
+107	1328	0	135
+107	1740	0	142
+107	2726	0	142
+107	2730	0	142
+107	2800	0	142
+107	2810	0	142
+107	2946	0	142
+107	2994	0	142
+107	3688	0	142
+107	4524	0	142
+107	4788	0	142
+107	4808	0	142
+107	4816	0	142
+107	5088	0	142
+108	454	0	109
+108	465	0	113
+108	470	0	113
+108	515	0	116
+108	518	0	116
+108	536	0	121
+108	996	0	133
+108	999	0	133
+108	1010	0	133
+108	1048	0	134
+108	1064	0	134
+108	1192	0	134
+108	1730	0	142
+108	1742	0	142
+108	1910	0	142
+108	1978	0	142
+108	2150	0	142
+108	2402	0	142
+108	2682	0	142
+108	2788	0	142
+108	2818	0	142
+108	2948	0	142
+108	2990	0	142
+108	3656	0	142
+108	3704	0	142
+108	4520	0	142
+108	4536	0	142
+108	4900	0	142
+108	4984	0	142
+108	5052	0	142
+108	5064	0	142
+108	5628	0	142
+109	455	0	110
+109	468	0	113
+109	850	0	129
+109	854	0	130
+109	1008	0	133
+109	1326	0	135
+109	1330	0	135
+109	1334	0	135
+109	1736	0	142
+109	1958	0	142
+109	1988	0	142
+109	2750	0	142
+109	2812	0	142
+109	2992	0	142
+109	4068	0	142
+109	5024	0	142
+109	5056	0	142
+110	456	0	111
+110	458	0	111
+110	461	0	113
+110	467	0	113
+110	472	0	114
+110	596	0	127
+110	807	0	128
+110	852	0	129
+110	1738	0	142
+110	1744	0	142
+110	1754	0	142
+110	1960	0	142
+110	2400	0	142
+110	2736	0	142
+110	2748	0	142
+110	3560	0	142
+110	4528	0	142
+110	4824	0	142
+110	5044	0	142
+110	5116	0	142
+111	459	0	112
+111	466	0	113
+111	513	0	116
+111	520	0	116
+111	584	0	126
+111	599	0	127
+111	750	0	128
+111	754	0	128
+111	920	0	131
+111	1062	0	134
+111	1382	0	135
+111	1388	0	135
+111	1942	0	142
+111	1970	0	142
+111	1994	0	142
+111	2408	0	142
+111	2688	0	142
+111	2714	0	142
+111	2982	0	142
+111	3624	0	142
+111	3708	0	142
+111	3732	0	142
+111	3744	0	142
+111	4040	0	142
+111	4932	0	142
+112	460	0	113
+112	476	0	116
+112	519	0	116
+112	524	0	119
+112	551	0	125
+112	556	0	125
+112	583	0	126
+112	593	0	126
+112	595	0	127
+112	855	0	130
+112	918	0	131
+112	980	0	133
+112	997	0	133
+112	1054	0	134
+112	1386	0	135
+112	1720	0	142
+112	1918	0	142
+112	2140	0	142
+112	2704	0	142
+112	2720	0	142
+112	2742	0	142
+112	2804	0	142
+112	2816	0	142
+112	3528	0	142
+112	4828	0	142
+112	5076	0	142
+112	5128	0	142
+113	471	0	114
+113	527	0	119
+113	537	0	121
+113	546	0	124
+113	550	0	125
+113	562	0	125
+113	588	0	126
+113	752	0	128
+113	806	0	128
+113	921	0	131
+113	1758	0	142
+113	1964	0	142
+113	2152	0	142
+113	2706	0	142
+113	2950	0	142
+113	2970	0	142
+113	3544	0	142
+113	3584	0	142
+113	3612	0	142
+113	3620	0	142
+113	3644	0	142
+113	4888	0	142
+113	5040	0	142
+114	473	0	115
+114	530	0	121
+114	597	0	127
+114	751	0	128
+114	753	0	128
+114	1710	0	142
+114	1746	0	142
+114	1940	0	142
+114	1952	0	142
+114	2006	0	142
+114	2692	0	142
+114	2974	0	142
+114	3600	0	142
+114	3724	0	142
+114	3980	0	142
+114	4920	0	142
+114	5084	0	142
+114	5152	0	142
+114	5652	0	142
+115	475	0	116
+115	531	0	121
+115	1028	0	134
+115	1034	0	134
+115	1734	0	142
+115	1752	0	142
+115	1956	0	142
+115	2700	0	142
+115	2718	0	142
+115	2752	0	142
+115	2782	0	142
+115	2794	0	142
+115	3568	0	142
+115	3684	0	142
+115	4792	0	142
+115	5020	0	142
+116	521	0	117
+116	1060	0	134
+116	1962	0	142
+116	1984	0	142
+116	2410	0	142
+116	2698	0	142
+116	2728	0	142
+116	2802	0	142
+116	2808	0	142
+116	3676	0	142
+116	4016	0	142
+116	4780	0	142
+116	4896	0	142
+116	5148	0	142
+116	5644	0	142
+117	522	0	118
+117	526	0	119
+117	808	0	128
+117	845	0	128
+117	917	0	131
+117	1002	0	133
+117	1324	0	135
+117	1336	0	135
+117	2690	0	142
+117	2712	0	142
+117	2732	0	142
+117	2754	0	142
+117	2766	0	142
+117	2798	0	142
+117	2944	0	142
+117	2988	0	142
+117	3524	0	142
+117	3712	0	142
+117	4004	0	142
+117	4028	0	142
+117	4064	0	142
+117	4772	0	142
+117	4804	0	142
+117	4960	0	142
+117	5624	0	142
+118	523	0	119
+118	535	0	121
+118	557	0	125
+118	748	0	128
+118	846	0	128
+118	981	0	133
+118	1716	0	142
+118	1980	0	142
+118	2676	0	142
+118	2760	0	142
+118	2824	0	142
+118	2828	0	142
+118	3716	0	142
+118	4056	0	142
+118	4764	0	142
+118	4948	0	142
+119	528	0	120
+119	566	0	125
+119	587	0	126
+119	912	0	131
+119	2154	0	142
+119	3636	0	142
+119	4996	0	142
+120	529	0	121
+120	547	0	124
+120	565	0	125
+120	4924	0	142
+121	539	0	122
+121	542	0	124
+121	544	0	124
+121	924	0	131
+121	926	0	131
+121	929	0	132
+121	1924	0	142
+121	2050	0	142
+121	2064	0	142
+121	2070	0	142
+121	2372	0	142
+121	2384	0	142
+121	2838	0	142
+121	4912	0	142
+122	540	0	123
+122	925	0	131
+122	2060	0	142
+122	2380	0	142
+123	541	0	124
+123	543	0	124
+123	928	0	132
+123	2052	0	142
+123	2056	0	142
+123	2066	0	142
+123	2374	0	142
+123	2378	0	142
+124	548	0	125
+124	564	0	125
+124	586	0	126
+124	922	0	131
+124	1938	0	142
+124	1966	0	142
+124	1992	0	142
+124	2394	0	142
+124	3616	0	142
+124	3628	0	142
+124	3740	0	142
+124	4076	0	142
+124	4928	0	142
+124	4936	0	142
+124	4976	0	142
+124	5380	0	142
+125	571	0	126
+126	594	0	127
+126	1056	0	134
+126	1188	0	134
+126	1954	0	142
+126	1982	0	142
+126	2702	0	142
+126	2724	0	142
+126	2746	0	142
+126	2770	0	142
+126	2996	0	142
+126	3976	0	142
+126	5008	0	142
+126	5032	0	142
+126	5080	0	142
+126	5096	0	142
+126	5120	0	142
+127	673	0	128
+127	4420	0	142
+127	4428	0	142
+127	5732	0	142
+127	5740	0	142
+128	849	0	129
+128	1014	0	133
+128	1030	0	134
+128	1190	0	134
+128	1986	0	142
+128	2680	0	142
+128	2722	0	142
+128	3556	0	142
+128	3564	0	142
+128	4020	0	142
+128	4892	0	142
+128	5028	0	142
+128	5060	0	142
+128	5132	0	142
+129	853	0	130
+129	1000	0	133
+129	1012	0	133
+129	1016	0	133
+129	1020	0	134
+129	1024	0	134
+129	1332	0	135
+129	2772	0	142
+129	2776	0	142
+129	2780	0	142
+129	2814	0	142
+129	3680	0	142
+129	4784	0	142
+129	4812	0	142
+129	4820	0	142
+129	5048	0	142
+129	5092	0	142
+130	875	0	131
+130	1932	0	142
+130	2390	0	142
+130	5524	0	142
+131	927	0	132
+131	2054	0	142
+131	2058	0	142
+131	2062	0	142
+131	2068	0	142
+131	2376	0	142
+131	2382	0	142
+132	961	0	133
+132	1504	0	135
+132	1532	0	139
+132	1538	0	139
+132	1780	0	142
+132	1786	0	142
+132	1824	0	142
+132	2328	0	142
+132	2536	0	142
+132	2540	0	142
+132	2576	0	142
+132	2598	0	142
+132	2882	0	142
+132	3160	0	142
+132	4488	0	142
+132	5448	0	142
+133	1018	0	134
+133	2774	0	142
+133	2778	0	142
+134	1194	0	135
+134	2758	0	142
+134	2762	0	142
+134	2768	0	142
+134	2998	0	142
+134	4760	0	142
+134	4956	0	142
+135	1508	0	136
+135	1648	0	139
+135	1652	0	140
+135	1666	0	141
+135	1676	0	142
+135	5748	0	142
+135	5772	0	142
+135	5800	0	144
+135	5824	0	144
+135	5848	0	144
+136	1510	0	137
+136	1654	0	140
+136	1658	0	141
+136	1662	0	141
+136	1680	0	142
+136	1688	0	142
+136	2174	0	142
+136	5756	0	142
+137	1528	0	139
+137	1874	0	142
+137	2602	0	142
+138	1650	0	140
+138	1668	0	141
+138	1674	0	142
+138	1684	0	142
+138	5752	0	142
+138	5764	0	142
+138	5780	0	142
+138	5808	0	144
+138	5840	0	144
+139	1656	0	141
+139	1672	0	142
+139	1678	0	142
+139	1686	0	142
+139	5760	0	142
+139	5768	0	142
+139	5776	0	142
+139	5796	0	144
+139	5844	0	144
+140	1670	0	142
+140	1682	0	142
+140	5792	0	144
+140	5852	0	144
+141	1990	0	142
+141	4072	0	142
+142	5784	0	143
+142	5804	0	144
+142	5812	0	144
+142	5820	0	144
+142	5828	0	144
+142	5836	0	144
+142	5856	0	144
+143	5788	0	144
+143	5816	0	144
+143	5832	0	144
+144	5860	0	145
 

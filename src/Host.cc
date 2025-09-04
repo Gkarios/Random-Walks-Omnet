@@ -11,7 +11,7 @@ void Host::initialize(int stage) {
     int numNodes = getParentModule()->par("numNodes").intValue();
 
     // Pick a random starting node index for the Random Walker 
-    int randomNodeIndex = intuniform(0, numNodes - 1);
+    int randomNodeIndex = 6;//intuniform(0, numNodes - 1);
 
     cTopology::Node *randomNode = topo.getNode(randomNodeIndex);
     if (randomNode) {

@@ -27,6 +27,7 @@ network RGG
         int startNode = default(11);
         @display("bgb=1,1");
         bool enableDuplication = default(false) @mutable; // Enable walker duplication
+        bool disableBacktracking = default(false) @mutable; // Disable backtracking for walkers
         int numWalkers = default(1);
     submodules:
         node[numNodes]: Node;

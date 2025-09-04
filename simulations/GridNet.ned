@@ -24,8 +24,10 @@ network GridNet
 		int numNodes = default(25);
         double rc = default(1.1); //0.5
         int sinkNode @mutable = default(0);
-        int startNode = default(11);
+        int startNode = default(6);
         int numWalkers = default(1);
+        bool enableDuplication = default(false);
+        bool disableBacktracking = default(false);
         @display("bgb=4,4");
     submodules:
         node[5*5]: Node {

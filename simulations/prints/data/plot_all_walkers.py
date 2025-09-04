@@ -2,7 +2,7 @@
 from coverage_utils import load_coverage_data
 import matplotlib.pyplot as plt
 
-num_nodes = 50
+num_nodes = 100
 experiments = [
     ("rw_1", "1 Walker"),
     ("rw_2", "2 Walkers"),

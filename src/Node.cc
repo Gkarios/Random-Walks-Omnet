@@ -10,16 +10,17 @@ bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
 int Node::timestep = 0;
-int Node::duplicationInterval = 50;
+int Node::duplicationInterval = 1000;
 int Node::walkerIdCounter = 100000; 
 bool Node::enableDuplication = false;
+bool Node::disableBacktracking = false;
 
 void Node::initialize(int stage) {
     if (stage == 0) {
         int numNodes = getParentModule()->par("numNodes").intValue();
         enableDuplication = getParentModule()->par("enableDuplication").boolValue();
+        disableBacktracking = getParentModule()->par("disableBacktracking").boolValue();
         visitedVector.setName("visitedPerTimestep");
-
         // Always reset static state!
         visited.assign(numNodes, false);
         globalAllVisited = false;
@@ -27,7 +28,7 @@ void Node::initialize(int stage) {
         visitedPerTimestep.push_back(0); // Start with timestep 0, 0 nodes visited
         walkersMovedThisStep = 0;
         timestep = 0;
-        walkerIdCounter = 100000; // Or whatever your initial value is
+        walkerIdCounter = 100000; // A unique ID for each walker
     }
     if (stage == 1) {
         numWalkers = getParentModule()->par("numWalkers").intValue();
@@ -35,7 +36,7 @@ void Node::initialize(int stage) {
         if (!hostModule)
             throw cRuntimeError("Host module not found!");
 
-        int startNodeIndex = 7; // Or your logic for start node
+        int startNodeIndex = 7; // The node from which the RW starts from 
         if (getIndex() == startNodeIndex) {
             for (int i = 0; i < numWalkers; ++i) {
                 startRandomWalker(i);
@@ -116,9 +117,31 @@ void Node::handleMessage(cMessage *msg) {
 void Node::sendToRandomNeighbor(RandomWalkerMsg *msg) {
     int n = gateSize("port");
     if (n > 0) {
-        int neighbor = intuniform(0, n - 1);
-        send(msg, "port$o", neighbor);
-        EV << "Sent randomWalkerMsg to neighbor at gate index " << neighbor << endl;
+        int neighborGateIdx;
+        if (disableBacktracking && msg->getPathArraySize() > 1) {
+            int prevNode = msg->getPath(msg->getPathArraySize() - 2);
+            std::vector<int> candidates;
+            for (int i = 0; i < n; ++i) {
+                // Get the connected module for this gate
+                cGate *outGate = gate("port$o", i);
+                cGate *inGate = outGate->getNextGate();
+                if (inGate) {
+                    cModule *neighborMod = inGate->getOwnerModule();
+                    int neighborNodeIdx = neighborMod->getIndex();
+                    if (neighborNodeIdx != prevNode)
+                        candidates.push_back(i);
+                }
+            }
+            if (!candidates.empty()) {
+                neighborGateIdx = candidates[intuniform(0, candidates.size() - 1)];
+            } else {
+                neighborGateIdx = intuniform(0, n - 1); // fallback: no choice but to backtrack
+            }
+        } else {
+            neighborGateIdx = intuniform(0, n - 1);
+        }
+        send(msg, "port$o", neighborGateIdx);
+        EV << "Sent randomWalkerMsg to neighbor at gate index " << neighborGateIdx << endl;
     } else {
         EV << "No neighbors to send to!" << endl;
         delete msg;
@@ -174,5 +197,5 @@ void Node::duplicateWalker(RandomWalkerMsg *rwMsg) {
 }
 
 void Node::finish(){
-    EV << "Random walkers are " << numWalkers << " in total.\n";
+    // EV << "Random walkers are " << numWalkers << " in total.\n";
 }

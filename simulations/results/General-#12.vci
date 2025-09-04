@@ -1,108 +1,599 @@
-file 3920 1754681890                                            
+file 58496 1756984391                                           
 version 3
-run General-12-20250808-22:38:10-6366
+run General-12-20250904-14:13:11-15188
 attr configname General
-attr datetime 20250808-22:38:10
-attr datetimef 20250808-223810
+attr datetime 20250904-14:13:11
+attr datetimef 20250904-141311
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
-attr network RGG
-attr processid 6366
+attr network TaxiNetwork
+attr processid 15188
 attr repetition 12
 attr replication #12
 attr resultdir results
 attr runnumber 12
 attr seedset 12
-config network RGG
+config network TaxiNetwork
 config seed-set 12
 config num-rngs 1
 config sim-time-limit 10s
 config repeat 500
-config **.node[*].xCor "uniform(0.0, 1.0, 0)"
-config **.node[*].yCor "uniform(0.0, 1.0, 0)"
 config *.numWalkers 1
-config *.numNodes 50
 config *.enableDuplication true
-config *.rc 0.4
+config *.rc 700
+config **.node[0].xCor 2933
+config **.node[0].yCor 2747
+config **.node[1].xCor 2919
+config **.node[1].yCor 2817
+config **.node[2].xCor 2910
+config **.node[2].yCor 2861
+config **.node[3].xCor 2429
+config **.node[3].yCor 2851
+config **.node[4].xCor 2908
+config **.node[4].yCor 2714
+config **.node[5].xCor 2606
+config **.node[5].yCor 2722
+config **.node[6].xCor 2575
+config **.node[6].yCor 2753
+config **.node[7].xCor 2654
+config **.node[7].yCor 2513
+config **.node[8].xCor 2773
+config **.node[8].yCor 2580
+config **.node[9].xCor 3043
+config **.node[9].yCor 2780
+config **.node[10].xCor 3020
+config **.node[10].yCor 2813
+config **.node[11].xCor 2599
+config **.node[11].yCor 2300
+config **.node[12].xCor 2917
+config **.node[12].yCor 2698
+config **.node[13].xCor 2625
+config **.node[13].yCor 2641
+config **.node[14].xCor 2604
+config **.node[14].yCor 2790
+config **.node[15].xCor 2786
+config **.node[15].yCor 3082
+config **.node[16].xCor 2603
+config **.node[16].yCor 2802
+config **.node[17].xCor 2637
+config **.node[17].yCor 2869
+config **.node[18].xCor 2675
+config **.node[18].yCor 2955
+config **.node[19].xCor 2845
+config **.node[19].yCor 2937
+config **.node[20].xCor 2860
+config **.node[20].yCor 2888
+config **.node[21].xCor 2843
+config **.node[21].yCor 4158
+config **.node[22].xCor 2852
+config **.node[22].yCor 4017
+config **.node[23].xCor 2892
+config **.node[23].yCor 4961
+config **.node[24].xCor 2313
+config **.node[24].yCor 3993
+config **.node[25].xCor 2891
+config **.node[25].yCor 4959
+config **.node[26].xCor 2370
+config **.node[26].yCor 4050
+config **.node[27].xCor 2788
+config **.node[27].yCor 3958
+config **.node[28].xCor 2819
+config **.node[28].yCor 4428
+config **.node[29].xCor 2790
+config **.node[29].yCor 3761
+config **.node[30].xCor 2809
+config **.node[30].yCor 2908
+config **.node[31].xCor 2919
+config **.node[31].yCor 3575
+config **.node[32].xCor 2946
+config **.node[32].yCor 3466
+config **.node[33].xCor 2911
+config **.node[33].yCor 3453
+config **.node[34].xCor 2370
+config **.node[34].yCor 3656
+config **.node[35].xCor 2438
+config **.node[35].yCor 3738
+config **.node[36].xCor 2737
+config **.node[36].yCor 3570
+config **.node[37].xCor 2921
+config **.node[37].yCor 3698
+config **.node[38].xCor 2907
+config **.node[38].yCor 5197
+config **.node[39].xCor 2860
+config **.node[39].yCor 3852
+config **.node[40].xCor 2927
+config **.node[40].yCor 3684
+config **.node[41].xCor 3023
+config **.node[41].yCor 5313
+config **.node[42].xCor 3220
+config **.node[42].yCor 5811
+config **.node[43].xCor 3432
+config **.node[43].yCor 5715
+config **.node[44].xCor 2754
+config **.node[44].yCor 2463
+config **.node[45].xCor 2646
+config **.node[45].yCor 2673
+config **.node[46].xCor 3051
+config **.node[46].yCor 2792
+config **.node[47].xCor 1666
+config **.node[47].yCor 3697
+config **.node[48].xCor 1662
+config **.node[48].yCor 3694
+config **.node[49].xCor 1664
+config **.node[49].yCor 3667
+config **.node[50].xCor 1660
+config **.node[50].yCor 3664
+config **.node[51].xCor 1710
+config **.node[51].yCor 3573
+config **.node[52].xCor 2082
+config **.node[52].yCor 2650
+config **.node[53].xCor 2086
+config **.node[53].yCor 2657
+config **.node[54].xCor 2257
+config **.node[54].yCor 3232
+config **.node[55].xCor 2258
+config **.node[55].yCor 3225
+config **.node[56].xCor 1926
+config **.node[56].yCor 2570
+config **.node[57].xCor 1926
+config **.node[57].yCor 2576
+config **.node[58].xCor 2104
+config **.node[58].yCor 1758
+config **.node[59].xCor 1957
+config **.node[59].yCor 1826
+config **.node[60].xCor 3473
+config **.node[60].yCor 1523
+config **.node[61].xCor 3335
+config **.node[61].yCor 1726
+config **.node[62].xCor 3478
+config **.node[62].yCor 1517
+config **.node[63].xCor 3386
+config **.node[63].yCor 2119
+config **.node[64].xCor 3474
+config **.node[64].yCor 1762
+config **.node[65].xCor 3797
+config **.node[65].yCor 2099
+config **.node[66].xCor 3642
+config **.node[66].yCor 2136
+config **.node[67].xCor 3481
+config **.node[67].yCor 2334
+config **.node[68].xCor 3088
+config **.node[68].yCor 1505
+config **.node[69].xCor 3037
+config **.node[69].yCor 1693
+config **.node[70].xCor 3026
+config **.node[70].yCor 1700
+config **.node[71].xCor 3019
+config **.node[71].yCor 669
+config **.node[72].xCor 3513
+config **.node[72].yCor 1358
+config **.node[73].xCor 3545
+config **.node[73].yCor 1230
+config **.node[74].xCor 4228
+config **.node[74].yCor 4220
+config **.node[75].xCor 3379
+config **.node[75].yCor 1207
+config **.node[76].xCor 3596
+config **.node[76].yCor 963
+config **.node[77].xCor 3637
+config **.node[77].yCor 1188
+config **.node[78].xCor 3759
+config **.node[78].yCor 1030
+config **.node[79].xCor 2918
+config **.node[79].yCor 1455
+config **.node[80].xCor 2711
+config **.node[80].yCor 1297
+config **.node[81].xCor 439
+config **.node[81].yCor 1623
+config **.node[82].xCor 2857
+config **.node[82].yCor 3581
+config **.node[83].xCor 2858
+config **.node[83].yCor 3584
+config **.node[84].xCor 2999
+config **.node[84].yCor 2636
+config **.node[85].xCor 2905
+config **.node[85].yCor 2778
+config **.node[86].xCor 2653
+config **.node[86].yCor 2845
+config **.node[87].xCor 2864
+config **.node[87].yCor 2836
+config **.node[88].xCor 2426
+config **.node[88].yCor 2892
+config **.node[89].xCor 2964
+config **.node[89].yCor 2804
+config **.node[90].xCor 2586
+config **.node[90].yCor 3135
+config **.node[91].xCor 2864
+config **.node[91].yCor 2980
+config **.node[92].xCor 2527
+config **.node[92].yCor 3219
+config **.node[93].xCor 2863
+config **.node[93].yCor 3142
+config **.node[94].xCor 2485
+config **.node[94].yCor 3269
+config **.node[95].xCor 2653
+config **.node[95].yCor 1065
+config **.node[96].xCor 4062
+config **.node[96].yCor 400
+config **.node[97].xCor 5762
+config **.node[97].yCor 3023
+config **.node[98].xCor 1414
+config **.node[98].yCor 3461
+config **.node[99].xCor 2911
+config **.node[99].yCor 1737
+config **.node[100].xCor 2595
+config **.node[100].yCor 2299
+config **.node[101].xCor 2702
+config **.node[101].yCor 3419
+config **.node[102].xCor 2813
+config **.node[102].yCor 3307
+config **.node[103].xCor 2638
+config **.node[103].yCor 2258
+config **.node[104].xCor 2590
+config **.node[104].yCor 3125
+config **.node[105].xCor 1856
+config **.node[105].yCor 2990
+config **.node[106].xCor 1894
+config **.node[106].yCor 2239
+config **.node[107].xCor 383
+config **.node[107].yCor 1251
+config **.node[108].xCor 3447
+config **.node[108].yCor 5489
+config **.node[109].xCor 3450
+config **.node[109].yCor 5697
+config **.node[110].xCor 2719
+config **.node[110].yCor 1920
+config **.node[111].xCor 2085
+config **.node[111].yCor 2389
+config **.node[112].xCor 1910
+config **.node[112].yCor 2548
+config **.node[113].xCor 2069
+config **.node[113].yCor 2050
+config **.node[114].xCor 2184
+config **.node[114].yCor 2209
+config **.node[115].xCor 2278
+config **.node[115].yCor 2390
+config **.node[116].xCor 2249
+config **.node[116].yCor 2299
+config **.node[117].xCor 2356
+config **.node[117].yCor 2303
+config **.node[118].xCor 2192
+config **.node[118].yCor 2475
+config **.node[119].xCor 1720
+config **.node[119].yCor 2911
+config **.node[120].xCor 2400
+config **.node[120].yCor 2887
+config **.node[121].xCor 3344
+config **.node[121].yCor 1890
+config **.node[122].xCor 3136
+config **.node[122].yCor 2418
+config **.node[123].xCor 3243
+config **.node[123].yCor 2525
+config **.node[124].xCor 2396
+config **.node[124].yCor 1267
+config **.node[125].xCor 467
+config **.node[125].yCor 1875
+config **.node[126].xCor 3506
+config **.node[126].yCor 1221
+config **.node[127].xCor 1034
+config **.node[127].yCor 1474
+config **.node[128].xCor 2908
+config **.node[128].yCor 1784
+config **.node[129].xCor 2876
+config **.node[129].yCor 1761
+config **.node[130].xCor 2849
+config **.node[130].yCor 1795
+config **.node[131].xCor 3029
+config **.node[131].yCor 1859
+config **.node[132].xCor 2924
+config **.node[132].yCor 1848
+config **.node[133].xCor 3493
+config **.node[133].yCor 1559
+config **.node[134].xCor 2760
+config **.node[134].yCor 1761
+config **.node[135].xCor 1644
+config **.node[135].yCor 3755
+config **.node[136].xCor 1463
+config **.node[136].yCor 3432
+config **.node[137].xCor 2595
+config **.node[137].yCor 2849
+config **.node[138].xCor 2581
+config **.node[138].yCor 2867
+config **.node[139].xCor 2524
+config **.node[139].yCor 2911
+config **.node[140].xCor 2570
+config **.node[140].yCor 2924
+config **.node[141].xCor 2676
+config **.node[141].yCor 2890
+config **.node[142].xCor 2666
+config **.node[142].yCor 2876
+config **.node[143].xCor 3735
+config **.node[143].yCor 1726
+config **.node[144].xCor 1637
+config **.node[144].yCor 3438
 
-vector 0 RGG.node[9] visitedPerTimestep ETV
-vector 1 RGG.node[32] visitedPerTimestep ETV
-vector 2 RGG.node[2] visitedPerTimestep ETV
-vector 3 RGG.node[38] visitedPerTimestep ETV
-vector 4 RGG.node[40] visitedPerTimestep ETV
-vector 5 RGG.node[39] visitedPerTimestep ETV
-vector 6 RGG.node[17] visitedPerTimestep ETV
-vector 7 RGG.node[45] visitedPerTimestep ETV
-vector 8 RGG.node[48] visitedPerTimestep ETV
-vector 9 RGG.node[19] visitedPerTimestep ETV
-vector 10 RGG.node[0] visitedPerTimestep ETV
-vector 11 RGG.node[11] visitedPerTimestep ETV
-vector 12 RGG.node[34] visitedPerTimestep ETV
-vector 13 RGG.node[41] visitedPerTimestep ETV
-vector 14 RGG.node[21] visitedPerTimestep ETV
-vector 15 RGG.node[47] visitedPerTimestep ETV
-vector 16 RGG.node[3] visitedPerTimestep ETV
-vector 17 RGG.node[16] visitedPerTimestep ETV
-vector 18 RGG.node[27] visitedPerTimestep ETV
-vector 19 RGG.node[20] visitedPerTimestep ETV
-vector 20 RGG.node[31] visitedPerTimestep ETV
-vector 21 RGG.node[13] visitedPerTimestep ETV
-vector 22 RGG.node[44] visitedPerTimestep ETV
-vector 23 RGG.node[22] visitedPerTimestep ETV
-vector 24 RGG.node[24] visitedPerTimestep ETV
-vector 25 RGG.node[1] visitedPerTimestep ETV
-vector 26 RGG.node[10] visitedPerTimestep ETV
-vector 27 RGG.node[4] visitedPerTimestep ETV
-vector 28 RGG.node[7] visitedPerTimestep ETV
-vector 29 RGG.node[28] visitedPerTimestep ETV
-vector 30 RGG.node[26] visitedPerTimestep ETV
-vector 31 RGG.node[30] visitedPerTimestep ETV
-vector 32 RGG.node[6] visitedPerTimestep ETV
-vector 33 RGG.node[25] visitedPerTimestep ETV
-vector 34 RGG.node[12] visitedPerTimestep ETV
-vector 35 RGG.node[37] visitedPerTimestep ETV
-vector 36 RGG.node[18] visitedPerTimestep ETV
-vector 37 RGG.node[14] visitedPerTimestep ETV
-0	2420 49 1 230 0 0 5 1 46 105 3819
-1	2469 29 2 222 0 0 3 2 46 79 3081
-2	2498 18 3 78 0 0 2 3 31 34 970
-3	2516 50 4 226 0 0 5 4 46 136 4710
-4	2566 71 5 250 0 0 7 5 48 184 6842
-5	2637 58 6 182 0 0 6 6 44 144 4530
-6	2695 60 7 294 0 0 6 7 49 150 5272
-7	2755 61 8 190 0 0 6 8 44 186 6930
-8	2816 81 10 214 0 0 8 9 45 194 6034
-9	2897 31 12 238 0 0 3 10 47 84 3038
-10	2928 44 14 90 0 0 4 11 33 99 2723
-11	2972 58 19 290 0 0 5 12 49 174 7226
-12	3030 68 20 202 0 0 6 13 44 159 5207
-13	3098 11 21 21 0 0 1 14 14 14 196
-14	3109 23 24 144 0 0 2 15 44 59 2161
-15	3132 46 25 150 0 0 4 16 44 127 4657
-16	3178 70 26 266 0 0 6 17 48 214 8546
-17	3248 79 27 246 0 0 7 18 48 200 6576
-18	3327 71 30 278 0 0 6 19 48 243 10439
-19	3398 33 31 96 0 0 3 20 33 75 1973
-20	3431 22 36 52 0 0 2 21 25 46 1066
-21	3453 35 41 286 0 0 3 22 49 114 4734
-22	3488 58 43 186 0 0 5 23 44 183 7011
-23	3546 11 49 49 0 0 1 24 24 24 576
-24	3557 23 50 242 0 0 2 25 48 73 2929
-25	3580 47 58 298 0 0 4 27 50 169 7469
-26	3627 11 66 66 0 0 1 27 27 27 729
-27	3638 22 70 76 0 0 2 28 30 58 1684
-28	3660 22 74 88 0 0 2 29 33 62 1930
-29	3682 22 82 86 0 0 2 32 33 65 2113
-30	3704 35 84 218 0 0 3 33 45 118 4714
-31	3739 12 104 104 0 0 1 35 35 35 1225
-32	3751 24 106 128 0 0 2 37 42 79 3133
-33	3775 48 108 254 0 0 4 38 48 171 7365
-34	3823 24 120 258 0 0 2 41 48 89 3985
-35	3847 12 122 122 0 0 1 41 41 41 1681
-36	3859 48 132 282 0 0 4 43 49 179 8035
-37	3907 12 234 234 0 0 1 47 47 47 2209
+vector 0 TaxiNetwork.node[12] visitedPerTimestep ETV
+vector 1 TaxiNetwork.node[86] visitedPerTimestep ETV
+vector 2 TaxiNetwork.node[6] visitedPerTimestep ETV
+vector 3 TaxiNetwork.node[115] visitedPerTimestep ETV
+vector 4 TaxiNetwork.node[3] visitedPerTimestep ETV
+vector 5 TaxiNetwork.node[4] visitedPerTimestep ETV
+vector 6 TaxiNetwork.node[13] visitedPerTimestep ETV
+vector 7 TaxiNetwork.node[118] visitedPerTimestep ETV
+vector 8 TaxiNetwork.node[105] visitedPerTimestep ETV
+vector 9 TaxiNetwork.node[139] visitedPerTimestep ETV
+vector 10 TaxiNetwork.node[11] visitedPerTimestep ETV
+vector 11 TaxiNetwork.node[14] visitedPerTimestep ETV
+vector 12 TaxiNetwork.node[53] visitedPerTimestep ETV
+vector 13 TaxiNetwork.node[119] visitedPerTimestep ETV
+vector 14 TaxiNetwork.node[112] visitedPerTimestep ETV
+vector 15 TaxiNetwork.node[113] visitedPerTimestep ETV
+vector 16 TaxiNetwork.node[90] visitedPerTimestep ETV
+vector 17 TaxiNetwork.node[19] visitedPerTimestep ETV
+vector 18 TaxiNetwork.node[44] visitedPerTimestep ETV
+vector 19 TaxiNetwork.node[100] visitedPerTimestep ETV
+vector 20 TaxiNetwork.node[56] visitedPerTimestep ETV
+vector 21 TaxiNetwork.node[5] visitedPerTimestep ETV
+vector 22 TaxiNetwork.node[84] visitedPerTimestep ETV
+vector 23 TaxiNetwork.node[32] visitedPerTimestep ETV
+vector 24 TaxiNetwork.node[34] visitedPerTimestep ETV
+vector 25 TaxiNetwork.node[92] visitedPerTimestep ETV
+vector 26 TaxiNetwork.node[141] visitedPerTimestep ETV
+vector 27 TaxiNetwork.node[102] visitedPerTimestep ETV
+vector 28 TaxiNetwork.node[54] visitedPerTimestep ETV
+vector 29 TaxiNetwork.node[104] visitedPerTimestep ETV
+vector 30 TaxiNetwork.node[91] visitedPerTimestep ETV
+vector 31 TaxiNetwork.node[46] visitedPerTimestep ETV
+vector 32 TaxiNetwork.node[45] visitedPerTimestep ETV
+vector 33 TaxiNetwork.node[52] visitedPerTimestep ETV
+vector 34 TaxiNetwork.node[55] visitedPerTimestep ETV
+vector 35 TaxiNetwork.node[138] visitedPerTimestep ETV
+vector 36 TaxiNetwork.node[87] visitedPerTimestep ETV
+vector 37 TaxiNetwork.node[1] visitedPerTimestep ETV
+vector 38 TaxiNetwork.node[122] visitedPerTimestep ETV
+vector 39 TaxiNetwork.node[130] visitedPerTimestep ETV
+vector 40 TaxiNetwork.node[80] visitedPerTimestep ETV
+vector 41 TaxiNetwork.node[79] visitedPerTimestep ETV
+vector 42 TaxiNetwork.node[62] visitedPerTimestep ETV
+vector 43 TaxiNetwork.node[95] visitedPerTimestep ETV
+vector 44 TaxiNetwork.node[124] visitedPerTimestep ETV
+vector 45 TaxiNetwork.node[58] visitedPerTimestep ETV
+vector 46 TaxiNetwork.node[134] visitedPerTimestep ETV
+vector 47 TaxiNetwork.node[70] visitedPerTimestep ETV
+vector 48 TaxiNetwork.node[110] visitedPerTimestep ETV
+vector 49 TaxiNetwork.node[2] visitedPerTimestep ETV
+vector 50 TaxiNetwork.node[10] visitedPerTimestep ETV
+vector 51 TaxiNetwork.node[30] visitedPerTimestep ETV
+vector 52 TaxiNetwork.node[20] visitedPerTimestep ETV
+vector 53 TaxiNetwork.node[128] visitedPerTimestep ETV
+vector 54 TaxiNetwork.node[142] visitedPerTimestep ETV
+vector 55 TaxiNetwork.node[120] visitedPerTimestep ETV
+vector 56 TaxiNetwork.node[101] visitedPerTimestep ETV
+vector 57 TaxiNetwork.node[18] visitedPerTimestep ETV
+vector 58 TaxiNetwork.node[137] visitedPerTimestep ETV
+vector 59 TaxiNetwork.node[0] visitedPerTimestep ETV
+vector 60 TaxiNetwork.node[89] visitedPerTimestep ETV
+vector 61 TaxiNetwork.node[16] visitedPerTimestep ETV
+vector 62 TaxiNetwork.node[140] visitedPerTimestep ETV
+vector 63 TaxiNetwork.node[8] visitedPerTimestep ETV
+vector 64 TaxiNetwork.node[103] visitedPerTimestep ETV
+vector 65 TaxiNetwork.node[94] visitedPerTimestep ETV
+vector 66 TaxiNetwork.node[123] visitedPerTimestep ETV
+vector 67 TaxiNetwork.node[15] visitedPerTimestep ETV
+vector 68 TaxiNetwork.node[40] visitedPerTimestep ETV
+vector 69 TaxiNetwork.node[31] visitedPerTimestep ETV
+vector 70 TaxiNetwork.node[88] visitedPerTimestep ETV
+vector 71 TaxiNetwork.node[111] visitedPerTimestep ETV
+vector 72 TaxiNetwork.node[83] visitedPerTimestep ETV
+vector 73 TaxiNetwork.node[22] visitedPerTimestep ETV
+vector 74 TaxiNetwork.node[26] visitedPerTimestep ETV
+vector 75 TaxiNetwork.node[39] visitedPerTimestep ETV
+vector 76 TaxiNetwork.node[21] visitedPerTimestep ETV
+vector 77 TaxiNetwork.node[37] visitedPerTimestep ETV
+vector 78 TaxiNetwork.node[35] visitedPerTimestep ETV
+vector 79 TaxiNetwork.node[17] visitedPerTimestep ETV
+vector 80 TaxiNetwork.node[93] visitedPerTimestep ETV
+vector 81 TaxiNetwork.node[36] visitedPerTimestep ETV
+vector 82 TaxiNetwork.node[29] visitedPerTimestep ETV
+vector 83 TaxiNetwork.node[74] visitedPerTimestep ETV
+vector 84 TaxiNetwork.node[51] visitedPerTimestep ETV
+vector 85 TaxiNetwork.node[57] visitedPerTimestep ETV
+vector 86 TaxiNetwork.node[116] visitedPerTimestep ETV
+vector 87 TaxiNetwork.node[117] visitedPerTimestep ETV
+vector 88 TaxiNetwork.node[132] visitedPerTimestep ETV
+vector 89 TaxiNetwork.node[63] visitedPerTimestep ETV
+vector 90 TaxiNetwork.node[65] visitedPerTimestep ETV
+vector 91 TaxiNetwork.node[121] visitedPerTimestep ETV
+vector 92 TaxiNetwork.node[129] visitedPerTimestep ETV
+vector 93 TaxiNetwork.node[82] visitedPerTimestep ETV
+vector 94 TaxiNetwork.node[9] visitedPerTimestep ETV
+vector 95 TaxiNetwork.node[7] visitedPerTimestep ETV
+vector 96 TaxiNetwork.node[24] visitedPerTimestep ETV
+vector 97 TaxiNetwork.node[28] visitedPerTimestep ETV
+vector 98 TaxiNetwork.node[27] visitedPerTimestep ETV
+vector 99 TaxiNetwork.node[85] visitedPerTimestep ETV
+vector 100 TaxiNetwork.node[114] visitedPerTimestep ETV
+vector 101 TaxiNetwork.node[60] visitedPerTimestep ETV
+vector 102 TaxiNetwork.node[75] visitedPerTimestep ETV
+vector 103 TaxiNetwork.node[73] visitedPerTimestep ETV
+vector 104 TaxiNetwork.node[64] visitedPerTimestep ETV
+vector 105 TaxiNetwork.node[143] visitedPerTimestep ETV
+vector 106 TaxiNetwork.node[78] visitedPerTimestep ETV
+vector 107 TaxiNetwork.node[131] visitedPerTimestep ETV
+vector 108 TaxiNetwork.node[99] visitedPerTimestep ETV
+vector 109 TaxiNetwork.node[61] visitedPerTimestep ETV
+vector 110 TaxiNetwork.node[133] visitedPerTimestep ETV
+vector 111 TaxiNetwork.node[68] visitedPerTimestep ETV
+vector 112 TaxiNetwork.node[66] visitedPerTimestep ETV
+vector 113 TaxiNetwork.node[67] visitedPerTimestep ETV
+vector 114 TaxiNetwork.node[106] visitedPerTimestep ETV
+vector 115 TaxiNetwork.node[33] visitedPerTimestep ETV
+vector 116 TaxiNetwork.node[144] visitedPerTimestep ETV
+vector 117 TaxiNetwork.node[47] visitedPerTimestep ETV
+vector 118 TaxiNetwork.node[49] visitedPerTimestep ETV
+vector 119 TaxiNetwork.node[71] visitedPerTimestep ETV
+vector 120 TaxiNetwork.node[50] visitedPerTimestep ETV
+vector 121 TaxiNetwork.node[135] visitedPerTimestep ETV
+vector 122 TaxiNetwork.node[48] visitedPerTimestep ETV
+vector 123 TaxiNetwork.node[136] visitedPerTimestep ETV
+vector 124 TaxiNetwork.node[69] visitedPerTimestep ETV
+vector 125 TaxiNetwork.node[96] visitedPerTimestep ETV
+vector 126 TaxiNetwork.node[126] visitedPerTimestep ETV
+vector 127 TaxiNetwork.node[77] visitedPerTimestep ETV
+vector 128 TaxiNetwork.node[72] visitedPerTimestep ETV
+vector 129 TaxiNetwork.node[76] visitedPerTimestep ETV
+vector 130 TaxiNetwork.node[127] visitedPerTimestep ETV
+vector 131 TaxiNetwork.node[98] visitedPerTimestep ETV
+vector 132 TaxiNetwork.node[109] visitedPerTimestep ETV
+vector 133 TaxiNetwork.node[41] visitedPerTimestep ETV
+vector 134 TaxiNetwork.node[42] visitedPerTimestep ETV
+vector 135 TaxiNetwork.node[38] visitedPerTimestep ETV
+vector 136 TaxiNetwork.node[23] visitedPerTimestep ETV
+vector 137 TaxiNetwork.node[108] visitedPerTimestep ETV
+vector 138 TaxiNetwork.node[59] visitedPerTimestep ETV
+vector 139 TaxiNetwork.node[125] visitedPerTimestep ETV
+0	16693 538 1 6740 0 0 43 1 142 5218 670978
+1	17231 551 2 6988 0 0 45 2 142 5238 648304
+2	17782 464 3 6644 0 0 38 3 141 4394 554282
+3	18246 279 4 6900 0 0 23 4 142 2617 331169
+4	18525 641 6 7512 0 0 51 5 142 6378 827366
+5	19166 395 7 6868 0 0 33 6 142 3507 414835
+6	19561 558 8 7368 0 0 45 7 142 5401 686077
+7	20119 273 9 7320 0 0 22 8 142 2686 349038
+8	20392 46 10 5592 0 0 4 9 141 371 44563
+9	20438 659 11 6656 0 0 53 10 141 6324 801868
+10	21097 490 13 7240 0 0 36 11 142 4428 574934
+11	21587 703 14 7472 0 0 52 12 142 6386 821774
+12	22290 360 15 7312 0 0 27 13 142 3159 395537
+13	22650 148 16 5612 0 0 11 14 141 1295 166603
+14	22798 93 17 3444 0 0 7 15 135 767 95509
+15	22891 144 18 6280 0 0 11 16 141 1160 146476
+16	23035 683 21 7304 0 0 51 17 142 6033 756261
+17	23718 682 24 7000 0 0 51 18 142 6112 767872
+18	24400 555 25 6940 0 0 41 19 142 5065 653309
+19	24955 447 26 7464 0 0 33 20 142 4080 523364
+20	25402 205 28 5716 0 0 15 21 141 1853 241445
+21	25607 622 29 7328 0 0 46 22 142 5641 717247
+22	26229 472 30 7200 0 0 35 23 142 4254 538634
+23	26701 388 33 6996 0 0 29 24 142 3464 435134
+24	27089 223 34 5916 0 0 17 25 141 1915 230317
+25	27312 633 35 6884 0 0 47 26 142 5712 721882
+26	27945 577 37 7176 0 0 43 27 142 5152 643102
+27	28522 520 38 7504 0 0 39 28 142 4689 584943
+28	29042 412 41 7352 0 0 31 29 142 3698 458242
+29	29454 623 42 7552 0 0 46 30 142 5622 713188
+30	30077 524 43 7432 0 0 39 31 142 4707 593841
+31	30601 468 44 7560 0 0 34 32 142 4433 590947
+32	31069 560 45 7408 0 0 42 33 142 4996 617442
+33	31629 254 46 6648 0 0 19 34 141 2252 280170
+34	31883 425 47 7480 0 0 32 35 142 3831 478655
+35	32308 504 49 7528 0 0 37 36 142 4705 612117
+36	32812 596 50 7120 0 0 44 37 142 5460 698060
+37	33408 508 54 7224 0 0 37 38 142 4748 621464
+38	33916 394 55 7456 0 0 29 39 142 3606 459652
+39	34310 270 56 6492 0 0 20 40 141 2345 295815
+40	34580 144 57 6212 0 0 11 41 141 1217 147137
+41	34724 157 58 6148 0 0 12 42 141 1282 153844
+42	34881 232 60 7064 0 0 17 43 142 2114 272790
+43	35113 39 64 2526 0 0 3 44 133 302 35250
+44	35152 52 65 2528 0 0 4 45 133 411 47003
+45	35204 38 66 3460 0 0 3 46 135 289 32005
+46	35242 150 67 7696 0 0 11 47 143 1352 173772
+47	35392 262 69 6220 0 0 19 48 141 2429 318217
+48	35654 191 70 7688 0 0 14 49 143 1752 226546
+49	35845 531 72 7520 0 0 39 50 142 4948 642026
+50	36376 641 74 7440 0 0 47 51 142 5998 780718
+51	37017 545 75 7424 0 0 40 52 142 5100 661656
+52	37562 604 77 7280 0 0 45 53 142 5414 676830
+53	38166 328 79 7736 0 0 24 54 145 3042 393572
+54	38494 565 83 7216 0 0 42 55 142 5196 661886
+55	39059 727 85 6832 0 0 54 56 142 6597 828431
+56	39786 471 88 7536 0 0 35 57 142 4348 552510
+57	40257 706 90 6440 0 0 52 58 141 6542 839958
+58	40963 441 96 7208 0 0 33 59 142 3987 496649
+59	41404 471 97 6756 0 0 35 60 142 4307 544049
+60	41875 546 99 7184 0 0 40 61 142 5118 665340
+61	42421 544 101 6528 0 0 40 62 141 4994 636206
+62	42965 520 105 7344 0 0 38 63 142 4830 625602
+63	43485 536 108 7448 0 0 40 64 142 4791 592631
+64	44021 503 110 6572 0 0 37 65 141 4612 586534
+65	44524 413 120 7376 0 0 31 66 142 3706 460054
+66	44937 482 124 7568 0 0 35 67 142 4524 591092
+67	45419 543 141 7360 0 0 40 68 142 5037 647545
+68	45962 174 144 5396 0 0 13 69 135 1569 194101
+69	46136 285 146 5784 0 0 21 70 141 2613 331577
+70	46421 519 148 6928 0 0 38 71 142 4853 627237
+71	46940 189 154 6924 0 0 14 72 142 1722 216134
+72	47129 204 160 7488 0 0 15 73 142 1854 237234
+73	47333 157 161 4944 0 0 12 74 135 1356 158580
+74	47490 94 162 4948 0 0 7 75 135 840 104514
+75	47584 133 163 5804 0 0 10 76 141 1205 149867
+76	47717 132 165 4104 0 0 10 77 135 1150 136642
+77	47849 158 167 5808 0 0 12 78 141 1421 173115
+78	48007 241 169 6796 0 0 18 79 142 2229 281427
+79	48248 635 171 6880 0 0 47 80 142 5872 745478
+80	48883 532 175 6848 0 0 39 81 142 4931 631745
+81	49415 188 202 7496 0 0 14 82 142 1721 215309
+82	49603 120 204 6856 0 0 9 83 142 1093 136185
+83	49723 110 207 5908 0 0 8 84 141 1032 135678
+84	49833 108 212 2030 0 0 8 85 133 989 124231
+85	49941 152 215 6264 0 0 11 86 141 1437 190037
+86	50093 246 229 7400 0 0 18 87 142 2329 305525
+87	50339 328 230 6932 0 0 24 88 142 3035 389157
+88	50667 150 243 7056 0 0 11 89 142 1381 175437
+89	50817 249 244 7672 0 0 18 90 143 2316 300480
+90	51066 68 246 7088 0 0 5 91 142 639 83439
+91	51134 262 247 7624 0 0 19 92 142 2460 321470
+92	51396 178 248 6488 0 0 13 93 141 1661 213919
+93	51574 299 256 7544 0 0 22 94 142 2832 368028
+94	51873 616 287 7416 0 0 45 95 142 5804 754424
+95	52489 548 313 7288 0 0 40 96 142 5130 663686
+96	53037 67 324 4512 0 0 5 97 135 622 78388
+97	53104 40 328 3772 0 0 3 98 135 366 45518
+98	53144 109 333 4516 0 0 8 99 135 1022 131678
+99	53253 448 336 7296 0 0 33 100 142 4113 518421
+100	53701 162 340 6268 0 0 11 101 141 1402 180098
+101	53863 312 399 7592 0 0 21 102 142 2724 355528
+102	54175 192 400 6196 0 0 13 103 141 1644 209986
+103	54367 163 401 6188 0 0 11 104 141 1407 181335
+104	54530 268 402 7616 0 0 18 105 142 2351 308477
+105	54798 207 407 6476 0 0 14 106 141 1800 232874
+106	55005 89 408 1932 0 0 6 107 132 750 94182
+107	55094 281 411 7728 0 0 19 108 144 2462 320828
+108	55375 251 446 6128 0 0 17 109 141 2186 282696
+109	55626 268 448 7584 0 0 18 110 142 2364 311698
+110	55894 329 450 6204 0 0 22 111 141 2884 378758
+111	56223 192 456 7704 0 0 13 112 144 1680 218536
+112	56415 179 486 7576 0 0 12 113 142 1612 217326
+113	56594 223 487 7032 0 0 15 114 142 1948 253836
+114	56817 89 521 6276 0 0 6 115 141 785 103085
+115	56906 280 575 6444 0 0 19 116 141 2468 321942
+116	57186 28 775 947 0 0 2 117 124 241 29065
+117	57214 43 776 2020 0 0 3 118 133 374 46742
+118	57257 43 777 2006 0 0 3 119 133 374 46734
+119	57300 14 823 823 0 0 1 120 120 120 14400
+120	57314 29 941 2022 0 0 2 121 133 254 32330
+121	57343 29 942 2024 0 0 2 122 133 255 32573
+122	57372 29 944 2018 0 0 2 123 133 256 32818
+123	57401 29 946 2004 0 0 2 124 133 257 33065
+124	57430 285 1160 7720 0 0 19 125 144 2548 342196
+125	57715 15 1166 1166 0 0 1 126 126 126 15876
+126	57730 120 1170 3400 0 0 8 127 135 1050 137870
+127	57850 150 1174 4812 0 0 10 128 135 1318 173788
+128	58000 210 1254 7712 0 0 14 129 144 1880 252710
+129	58210 15 1702 1702 0 0 1 132 132 132 17424
+130	58225 45 1958 7656 0 0 3 133 143 418 58302
+131	58270 45 2008 2028 0 0 3 133 133 399 53067
+132	58315 45 2782 5884 0 0 3 134 141 410 56062
+133	58360 30 2784 5900 0 0 2 135 141 276 38106
+134	58390 15 5888 5888 0 0 1 141 141 141 19881
+135	58405 15 5892 5892 0 0 1 141 141 141 19881
+136	58420 15 5896 5896 0 0 1 141 141 141 19881
+137	58435 15 5904 5904 0 0 1 141 141 141 19881
+138	58450 30 6272 6904 0 0 2 141 142 283 40045
+139	58480 15 7648 7648 0 0 1 143 143 143 20449
 
