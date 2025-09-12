@@ -32,8 +32,6 @@ simple Node
         double distanceToSink = default(0.0) @mutable; //distance to sink
         int duplicationInterval = default(100) @mutable; // Interval for walker duplication
 
-
-        
         @display("p=$xCor,$yCor;i=block/process;is=vs;");
         @node;
     gates:

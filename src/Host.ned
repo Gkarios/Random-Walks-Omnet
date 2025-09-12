@@ -21,6 +21,7 @@ package randomw;
 simple Host
 {
     parameters:
+		int startNodeIndex = default(-1) @mutable;
         int startNode = default(11);
     	@display("i=abstract/penguin;is=vs;p=0,0");
         @name("Host");

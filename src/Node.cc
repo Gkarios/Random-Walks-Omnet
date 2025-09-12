@@ -6,29 +6,26 @@ Define_Module(Node);
 // Initialization of static members
 std::vector<bool> Node::visited;
 std::vector<int> Node::visitedPerTimestep;
+bool Node::enableDuplication = false;
+bool Node::disableBacktracking = false;
 bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
-int Node::timestep = 0;
 int Node::duplicationInterval = 1000;
 int Node::walkerIdCounter = 100000; 
-bool Node::enableDuplication = false;
-bool Node::disableBacktracking = false;
+int Node::timestep = 0;
 
 void Node::initialize(int stage) {
     if (stage == 0) {
+        //fetch values
         int numNodes = getParentModule()->par("numNodes").intValue();
         enableDuplication = getParentModule()->par("enableDuplication").boolValue();
         disableBacktracking = getParentModule()->par("disableBacktracking").boolValue();
-        visitedVector.setName("visitedPerTimestep");
-        // Always reset static state!
+        //initialize the static data
         visited.assign(numNodes, false);
         globalAllVisited = false;
         visitedPerTimestep.clear();
-        visitedPerTimestep.push_back(0); // Start with timestep 0, 0 nodes visited
-        walkersMovedThisStep = 0;
-        timestep = 0;
-        walkerIdCounter = 100000; // A unique ID for each walker
+        visitedPerTimestep.push_back(0); // To start with [timestep, nodes] =  [0, 0] 
     }
     if (stage == 1) {
         numWalkers = getParentModule()->par("numWalkers").intValue();
@@ -36,10 +33,11 @@ void Node::initialize(int stage) {
         if (!hostModule)
             throw cRuntimeError("Host module not found!");
 
-        int startNodeIndex = 7; // The node from which the RW starts from 
+        int startNodeIndex = hostModule->par("startNodeIndex").intValue();
         if (getIndex() == startNodeIndex) {
             for (int i = 0; i < numWalkers; ++i) {
                 startRandomWalker(i);
+                EV << "I'm starting node" << getIndex() << " and I started walker " << i << endl;
             }
         }
     }
@@ -85,7 +83,6 @@ void Node::handleMessage(cMessage *msg) {
 
         // Record the number of visited nodes at this timestep
         visitedPerTimestep.push_back(uniqueVisited);
-        visitedVector.record(uniqueVisited);
 
         // Stop when all nodes have been visited (shared between the RWs)
         int numNodes = getParentModule()->par("numNodes").intValue();
@@ -122,7 +119,6 @@ void Node::sendToRandomNeighbor(RandomWalkerMsg *msg) {
             int prevNode = msg->getPath(msg->getPathArraySize() - 2);
             std::vector<int> candidates;
             for (int i = 0; i < n; ++i) {
-                // Get the connected module for this gate
                 cGate *outGate = gate("port$o", i);
                 cGate *inGate = outGate->getNextGate();
                 if (inGate) {
@@ -196,6 +192,6 @@ void Node::duplicateWalker(RandomWalkerMsg *rwMsg) {
     }
 }
 
-void Node::finish(){
-    // EV << "Random walkers are " << numWalkers << " in total.\n";
+void Node::finish() {
+    EV << "number of walkers at the end of the simulation were:" << numWalkers << endl;
 }

@@ -58,7 +58,6 @@ using namespace omnetpp;
   private:
     int startNodeIndex;
     bool alreadyVisited = false;
-    cOutVector visitedVector;
   };
 
 

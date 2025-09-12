@@ -6,18 +6,16 @@ Define_Module(Host);
 void Host::initialize(int stage) {
   if (stage == 0) {
     topo.extractByProperty("node");
-
-    // Fetch the number of nodes from omnetpp.ini
     int numNodes = getParentModule()->par("numNodes").intValue();
 
-    // Pick a random starting node index for the Random Walker 
-    int randomNodeIndex = 6;//intuniform(0, numNodes - 1);
-
+    int randomNodeIndex = intuniform(0, numNodes - 1); //or a fixed value for comparisons
     cTopology::Node *randomNode = topo.getNode(randomNodeIndex);
     if (randomNode) {
-      startNodeIndex = randomNodeIndex;
+      // write value into the Host's parameter table
+      par("startNodeIndex").setIntValue(randomNodeIndex);
+
       EV << "Randomly selected start node: " << randomNode->getModule()->getFullName()
-         << " with index: " << startNodeIndex << endl;
+         << " with index: " << par("startNodeIndex").intValue() << endl;
     } else {
       throw cRuntimeError("No node found for random index: %d", randomNodeIndex);
     }
@@ -28,10 +26,6 @@ void Host::handleMessage(cMessage *msg) {
     if (lastWalkerMsg)
         delete lastWalkerMsg;
     lastWalkerMsg = check_and_cast<RandomWalkerMsg *>(msg);
-}
-
-int Host::getStartNodeIndex() const{
-  return startNodeIndex;
 }
 
 void Host::finish() {
