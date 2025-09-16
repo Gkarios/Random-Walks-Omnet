@@ -13,7 +13,7 @@ network TaxiNetwork
         int startNode = default(11);
            @display("bgb=6000,6000");
         bool enableDuplication = default(false) @mutable;
-        bool disableBacktracking = default(false) @mutable;
+        bool noBacktracking = default(false) @mutable;
         int numWalkers = default(1);
     submodules:
         node[numNodes]: Node;

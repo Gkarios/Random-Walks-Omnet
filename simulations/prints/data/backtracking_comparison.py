@@ -14,7 +14,7 @@ ax = plt.gca()
 ax.set_facecolor("#f9f9f9")
 
 for (folder, label), color in zip(experiments, colors):
-    x, y = load_coverage_data(folder, num_nodes, label, threshold=100) #auto htan 99.5%
+    x, y = load_coverage_data(folder, num_nodes, label, threshold=99.5) #auto htan 99.5%
     plt.plot(x, y, label=label, linewidth=2.5, color=color)
 
     # Annotate final point
@@ -42,7 +42,7 @@ for y_val in [50, 90]:
     plt.axhline(y=y_val, color='gray', linestyle='--', linewidth=1, alpha=0.5)
     plt.text(0, y_val + 1, f"{y_val}%", color='gray', fontsize=9)
 
-plt.title("Random Walker Network Coverage (up to 100%)", fontsize=14, weight='bold')
+plt.title("Random Walker Network Coverage (up to 99.5%)", fontsize=14, weight='bold')
 plt.xlabel("Hops (t)", fontsize=12)
 plt.ylabel("Coverage (%)", fontsize=12)
 plt.ylim(0, 105)

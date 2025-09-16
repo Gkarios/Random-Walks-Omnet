@@ -15,7 +15,7 @@ ax.set_facecolor("#f9f9f9")
 
 
 for (folder, label), color in zip(experiments, colors):
-    x, y = load_coverage_data(folder, num_nodes, label, threshold=99)
+    x, y = load_coverage_data(folder, num_nodes, label, threshold=100)
     plt.plot(x, y, label=label, linewidth=2.5, color=color)
 
     # Annotate final point

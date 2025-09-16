@@ -6,12 +6,12 @@ Define_Module(Node);
 // Initialization of static members
 std::vector<bool> Node::visited;
 std::vector<int> Node::visitedPerTimestep;
-bool Node::enableDuplication = false;
-bool Node::disableBacktracking = false;
+bool Node::enableDuplication = true;
+bool Node::noBacktracking = false;
 bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
-int Node::duplicationInterval = 1000;
+int Node::duplicationInterval = 10;
 int Node::walkerIdCounter = 100000; 
 int Node::timestep = 0;
 
@@ -20,7 +20,7 @@ void Node::initialize(int stage) {
         //fetch values
         int numNodes = getParentModule()->par("numNodes").intValue();
         enableDuplication = getParentModule()->par("enableDuplication").boolValue();
-        disableBacktracking = getParentModule()->par("disableBacktracking").boolValue();
+        noBacktracking = getParentModule()->par("noBacktracking").boolValue();
         //initialize the static data
         visited.assign(numNodes, false);
         globalAllVisited = false;
@@ -71,7 +71,13 @@ void Node::handleMessage(cMessage *msg) {
         rwMsg->setVisitedNodes(visitedLen, nodeId);
     }
 
-    // Increment walkersMovedThisStep
+    // Attempt duplication at the START of the timestep for every walker
+    // (Previously only the last walker of the timestep duplicated because duplication
+    //  check was after the timestep increment.)
+    duplicateWalker(rwMsg);
+
+    // Increment walkersMovedThisStep AFTER potential duplication so all current walkers
+    // participate in duplication rounds simultaneously.
     walkersMovedThisStep++;
 
     // Only increment timestep and record data when all walkers have moved
@@ -90,8 +96,6 @@ void Node::handleMessage(cMessage *msg) {
             globalAllVisited = true;
         }
     }
-
-    duplicateWalker(rwMsg);
 
     if (globalAllVisited) {
         // Copy per-timestep data into the message
@@ -115,7 +119,7 @@ void Node::sendToRandomNeighbor(RandomWalkerMsg *msg) {
     int n = gateSize("port");
     if (n > 0) {
         int neighborGateIdx;
-        if (disableBacktracking && msg->getPathArraySize() > 1) {
+        if (noBacktracking && msg->getPathArraySize() > 1) {
             int prevNode = msg->getPath(msg->getPathArraySize() - 2);
             std::vector<int> candidates;
             for (int i = 0; i < n; ++i) {
@@ -154,15 +158,16 @@ void Node::startRandomWalker(int walkerId) {
     msg->setVisitedPerHopArraySize(1);
     msg->setVisitedPerHop(0, 1); // Only itself visited at hop 0
     msg->setWalkerId(walkerId);  // Add this field in your .msg file if you want to distinguish walkers
+    // Ensure it can duplicate in the first eligible duplication round
+    msg->setLastDuplicationRound(-1);
 
     sendToRandomNeighbor(msg);
 }
 
-void Node::triggerWalkerDuplication() {
+void Node::triggerWalkerDuplication(int currentDupRound) {
     // Only the node(s) currently holding a walker will execute this
     // Each walker duplicates itself
 
-    int currentDupRound = (duplicationInterval > 0) ? (timestep / duplicationInterval) : -1;
 
     RandomWalkerMsg *dupMsg = new RandomWalkerMsg("randomWalkerMsg");
     dupMsg->setPathArraySize(1);
@@ -181,14 +186,16 @@ void Node::triggerWalkerDuplication() {
 }
 
 void Node::duplicateWalker(RandomWalkerMsg *rwMsg) {
-    if (!enableDuplication)
+    if (!enableDuplication) {
         return;
+    }
 
     int currentDupRound = (duplicationInterval > 0) ? (timestep / duplicationInterval) : -1;
     if (!globalAllVisited && duplicationInterval > 0 && timestep > 0 && timestep % duplicationInterval == 0 &&
         rwMsg->getLastDuplicationRound() < currentDupRound) {
         rwMsg->setLastDuplicationRound(currentDupRound);
-        triggerWalkerDuplication();
+        triggerWalkerDuplication(currentDupRound);
+        EV << "Duplicated walkerId=" << rwMsg->getWalkerId() << " creating new walker. Total now=" << numWalkers << endl;
     }
 }
 

@@ -8,7 +8,7 @@ void Host::initialize(int stage) {
     topo.extractByProperty("node");
     int numNodes = getParentModule()->par("numNodes").intValue();
 
-    int randomNodeIndex = intuniform(0, numNodes - 1); //or a fixed value for comparisons
+    int randomNodeIndex = 1;//intuniform(0, numNodes - 1); //or a fixed value for comparisons
     cTopology::Node *randomNode = topo.getNode(randomNodeIndex);
     if (randomNode) {
       // write value into the Host's parameter table
