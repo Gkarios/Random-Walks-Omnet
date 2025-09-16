@@ -11,7 +11,7 @@ bool Node::noBacktracking = false;
 bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
-int Node::duplicationInterval = 50;
+int Node::duplicationInterval = 1000;
 int Node::walkerIdCounter = 100000; 
 int Node::timestep = 0;
 
@@ -146,7 +146,7 @@ void Node::sendToRandomNeighbor(RandomWalkerMsg *msg) {
             if (!candidates.empty()) {
                 neighborGateIdx = candidates[intuniform(0, candidates.size() - 1)];
             } else {
-                neighborGateIdx = intuniform(0, n - 1); // fallback: no choice but to backtrack
+                neighborGateIdx = intuniform(0, n - 1); // fallback: allow backtrack
             }
         } else {
             neighborGateIdx = intuniform(0, n - 1);
@@ -155,6 +155,7 @@ void Node::sendToRandomNeighbor(RandomWalkerMsg *msg) {
         EV << "Sent randomWalkerMsg to neighbor at gate index " << neighborGateIdx << endl;
     } else {
         EV << "No neighbors to send to!" << endl;
+        numWalkers--; // Decrement when walker is deleted
         delete msg;
     }
 }
