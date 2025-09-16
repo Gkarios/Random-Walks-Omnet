@@ -11,21 +11,32 @@ bool Node::noBacktracking = false;
 bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
-int Node::duplicationInterval = 10;
+int Node::duplicationInterval = 50;
 int Node::walkerIdCounter = 100000; 
 int Node::timestep = 0;
 
 void Node::initialize(int stage) {
     if (stage == 0) {
+        // Reset ALL static variables for new simulation runs
+        if (getIndex() == 0) { // Only reset once per simulation
+            visited.clear();
+            visitedPerTimestep.clear();
+            globalAllVisited = false;
+            numWalkers = 0;
+            walkersMovedThisStep = 0;
+            timestep = 0;
+            walkerIdCounter = 100000;
+        }
+        
         //fetch values
         int numNodes = getParentModule()->par("numNodes").intValue();
         enableDuplication = getParentModule()->par("enableDuplication").boolValue();
         noBacktracking = getParentModule()->par("noBacktracking").boolValue();
-        //initialize the static data
-        visited.assign(numNodes, false);
-        globalAllVisited = false;
-        visitedPerTimestep.clear();
-        visitedPerTimestep.push_back(0); // To start with [timestep, nodes] =  [0, 0] 
+        
+        if (getIndex() == 0) { // Only initialize once per simulation
+            visited.assign(numNodes, false);
+            visitedPerTimestep.push_back(0);
+        }
     }
     if (stage == 1) {
         numWalkers = getParentModule()->par("numWalkers").intValue();
