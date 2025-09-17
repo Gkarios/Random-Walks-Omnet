@@ -42,8 +42,6 @@ using namespace omnetpp;
     static bool enableDuplication;
     static bool noBacktracking;
     static int walkerIdCounter;
-    // Node();
-    // virtual ~Node();
 
   protected:
     virtual void initialize(int stage);

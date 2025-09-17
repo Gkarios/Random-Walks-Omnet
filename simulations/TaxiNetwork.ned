@@ -6,10 +6,9 @@ import randomw.Host;
 network TaxiNetwork
 {
         parameters:
-        int numNodes = default(145); // <-- will be set to actual number of Placemarks
-        double rc = default(0.2);   // radius for connectivity
-        double rcLong = default(1946); // for long-range connectivity
-        int sinkNode = default(0) @mutable;
+        int numNodes = default(145); // Placemarks
+        double rc = default(0.2);
+        double rcLong = default(1946); //min longRc
         int startNode = default(11);
            @display("bgb=6000,6000");
         bool enableDuplication = default(false) @mutable;

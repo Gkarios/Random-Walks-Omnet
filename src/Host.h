@@ -14,17 +14,11 @@ protected:
   virtual int numInitStages() const { return 3; }
   virtual void handleMessage(cMessage *msg) override;
   virtual void finish() override;
-//   virtual void finish();
-
-  // std::map<std::pair<int, int>, double> linkWeights;
-  // virtual void handleMessage(cMessage *msg) override;
 
 private:
   RandomWalkerMsg *lastWalkerMsg = nullptr;
   cTopology topo;
   int startNode;
-
-  // cTopology::Node* parentNode = nullptr;
 };
 
 #endif

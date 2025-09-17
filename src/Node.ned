@@ -21,16 +21,8 @@ package randomw;
 simple Node
 {
     parameters:
-        double sendInterval = default(1.0);
         double xCor = default(0.0);
         double yCor = default(0.0);
-        double packetLength = default(127); //bytes
-        double bitrate = default(250000); //bps
-        double initialEnergy = default(1000);
-        bool isSink = default(false) @mutable;
-        double ackTransmissionEnergyConsumption = default(0.0) @mutable; //An ack will deplete a proportion of the 
-        double distanceToSink = default(0.0) @mutable; //distance to sink
-        int duplicationInterval = default(100) @mutable; // Interval for walker duplication
 
         @display("p=$xCor,$yCor;i=block/process;is=vs;");
         @node;
