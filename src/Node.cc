@@ -11,7 +11,7 @@ bool Node::noBacktracking = false;
 bool Node::globalAllVisited = false;
 int Node::numWalkers = 0;
 int Node::walkersMovedThisStep = 0;
-int Node::duplicationInterval = 1000;
+int Node::duplicationInterval = 500;
 int Node::walkerIdCounter = 100000; 
 int Node::timestep = 0;
 
